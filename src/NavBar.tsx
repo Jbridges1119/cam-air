@@ -36,7 +36,10 @@ const NavBar: React.FC = () => {
       sx={{ textAlign: "center", backgroundColor: `${navBackgroundColor}` }}
     >
       <Button href="tel:4033206690">
-        <Typography variant="h6" sx={{ my: 2, color: "white" }}>
+        <Typography
+          variant="h5"
+          sx={{ my: 2, color: "white", fontWeight: "bold" }}
+        >
           Call: 403-320-6690
         </Typography>
       </Button>
@@ -45,7 +48,13 @@ const NavBar: React.FC = () => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center", color: "white" }}>
-              <ListItemText primary={item} />
+              <ListItemText
+                primary={item}
+                primaryTypographyProps={{
+                  fontSize: "22px",
+                  fontWeight: "bold",
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -64,6 +73,22 @@ const NavBar: React.FC = () => {
             background: "white",
           }}
         >
+     
+          <Box
+            sx={{
+              background: "white",
+              position: "absolute",
+              top: "50px",
+              zIndex: "100000",
+              borderBottomLeftRadius: 15,
+              borderBottomRightRadius: 15,
+              display: { md: "inline-block", xs: "none" },
+            }}
+          >
+            <Button sx={{ mt: 1 }} href="tel:4033206690">
+              <Typography variant="h5">403.320.6690</Typography>
+            </Button>
+          </Box>
           <Toolbar
             sx={{
               maxWidth: "1200px",
@@ -73,10 +98,12 @@ const NavBar: React.FC = () => {
               width: "100%",
             }}
           >
-            <Button>
+            <Button sx={{"&:hover": {
+                  background: "none",
+                },}}>
               <CardMedia
                 component="img"
-                sx={{ height: "50px", ml: 2 }}
+                sx={{ height: "50px", ml: { sm: 2, xs: 0.5 }, }}
                 image={logo}
                 alt="Loading.."
               />
@@ -86,7 +113,7 @@ const NavBar: React.FC = () => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { md: "none" }, color: "black"}}
+              sx={{ mr: 2, display: { md: "none" }, color: "#7d7d7d" }}
             >
               <MenuIcon />
             </IconButton>
@@ -100,7 +127,12 @@ const NavBar: React.FC = () => {
               {navItems.map((item) => (
                 <Button
                   key={item}
-                  sx={{ color: "black", fontSize: "18px", mt: 2 }}
+                  sx={{ color: "#7d7d7d", fontSize: "18px", mt: 2,
+                  "&:hover": {
+                    background: "none",
+                    color:'#1976d2'
+                  },
+                }}
                 >
                   {item}
                 </Button>
