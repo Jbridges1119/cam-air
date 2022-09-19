@@ -78,14 +78,15 @@ const NavBar: React.FC = () => {
             sx={{
               background: "white",
               position: "absolute",
-              top: "50px",
+              top: "64px",
               zIndex: "100000",
               borderBottomLeftRadius: 15,
               borderBottomRightRadius: 15,
               display: { md: "inline-block", xs: "none" },
+              boxShadow:'0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14)'
             }}
           >
-            <Button sx={{ mt: 1 }} href="tel:4033206690">
+            <Button  href="tel:4033206690">
               <Typography variant="h5">403.320.6690</Typography>
             </Button>
           </Box>
