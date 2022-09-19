@@ -9,11 +9,11 @@ const Banner = () => {
       justifyContent: "center",
       alignItems: "center",
       py: 4,
+      my:5
     }}
   >
     <Box
       sx={{
-        background: "#002685",
         display: "flex",
         flexDirection: { xs: "column", sm: "row" },
         justifyContent: "center",
