@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Divider, Typography } from '@mui/material'
 import React from 'react'
 
 const Introduction = () => {
@@ -12,6 +12,7 @@ const Introduction = () => {
     <Box sx={{...flexCenterSX, m:6}}>
       <Box sx={{ width:'600px'}}>
       <Typography variant='h6' textAlign={'center'} color={"#002685"}>COMMERCIAL HEATING, COOLING & REFRIGERATION SERVICES</Typography>
+      
       <Typography variant='h4' textAlign={'center'}  fontWeight={'bold'} py={2}>Industry expertise you need with a personal level of service.</Typography>
       <Typography variant='h6' textAlign={'center'} pt={2}> Serving Southern Alberta since 1992, Cam Air Refrigeration & Heating specializes in commercial refrigeration and air conditioning service and installations. Our fully stocked service vehicles can provide 24 hour service to all brands of equipment. Our journeyman refrigeration mechanics have experience with coolers, freezers, air conditioning, ice machines and more.</Typography>
 
