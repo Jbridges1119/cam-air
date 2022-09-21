@@ -12,7 +12,7 @@ const LandingPage = () => {
       <Header />
       <Introduction />
     <DescriptionCards/>
-      <Box sx={{ height: "1000px" }} />
+    
       <ServiceBanner />
       <ReviewCarousel />
     </>
