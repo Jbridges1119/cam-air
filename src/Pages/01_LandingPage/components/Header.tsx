@@ -2,25 +2,36 @@ import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import banner from "../../../Assests/headers/main.jpg";
 
+const outterBoxSX = {
+  backgroundImage: `url(${banner})`,
+  minHeight: "50vh",
+  width: "100%",
+  boxSizing: "border-box",
+  backgroundSize: "cover",
+  display: "flex",
+  flexDirection: "column",
+  overflowX: "hidden",
+  pt: { sm: "10%", xs: "30%" },
+  pb: "18%",
+  mt: { sm: 0, xs: "45px" },
+  justifyContent: "center",
+  alignItems: "center",
+}
+
+const buttonSX = {
+  p: { sm: "11px 20px", xs: "11px 10px" },
+  fontSize: { sm: "25px", xs: "20px" },
+  maxWidth: "400px",
+  border: "2px solid #1976d2",
+  "&:hover": {
+    background: "none",
+  }
+}
+
 const Header = () => {
   return (
     <Box
-      sx={{
-        backgroundImage: `url(${banner})`,
-
-        minHeight: "50vh",
-        width: "100%",
-        boxSizing: "border-box",
-        backgroundSize: "cover",
-        display: "flex",
-        flexDirection: "column",
-        overflowX: "hidden",
-        pt: { sm: "10%", xs: "30%" },
-        pb: "18%",
-        mt: { sm: 0, xs: "45px" },
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      sx={outterBoxSX}
     >
       <Box sx={{ maxWidth: "1400px" }}>
         <Grid
@@ -54,15 +65,7 @@ const Header = () => {
               </Typography>
               <Button
                 variant="contained"
-                sx={{
-                  p: { sm: "11px 20px", xs: "11px 10px" },
-                  fontSize: { sm: "25px", xs: "20px" },
-                  maxWidth: "400px",
-                  border: "2px solid #1976d2",
-                  "&:hover": {
-                    background: "none",
-                  },
-                }}
+                sx={buttonSX}
               >
                 Schedule An Appointment
               </Button>
