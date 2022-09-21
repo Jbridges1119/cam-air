@@ -1,6 +1,7 @@
 import React from 'react'
 //MUI
 import { Box, Button, Typography } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -34,6 +35,7 @@ const Banner = () => {
       >
         Contact our expert team today for a FREE no-obligation consultation
       </Typography>
+      <Link to="/contact"style={{textDecoration:'none'}}>
       <Button
         variant="contained"
         sx={{
@@ -47,7 +49,7 @@ const Banner = () => {
         }}
       >
         Contact Us Now
-      </Button>
+      </Button></Link>
     </Box>
   </Box>
   )

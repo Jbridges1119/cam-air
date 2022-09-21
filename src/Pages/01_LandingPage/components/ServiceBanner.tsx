@@ -1,5 +1,6 @@
 //MUI
-import { Box, Grid, Link, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 //Style
 import tools from "../../../Assets/stock/tools.jpg";
 
@@ -78,7 +79,7 @@ const ServiceBanner = () => {
                 Refrigeration Tradespeople are ready to get you back up and
                 running as fast as possible without compromising on quality.
               </Typography>
-              <Link href="#" underline="always">
+              <Link to="/services" >
                 <Typography variant="body1" sx={{ color: "white" }}>
                   Learn more about our maintenance services
                 </Typography>

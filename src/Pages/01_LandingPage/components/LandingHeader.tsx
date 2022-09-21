@@ -64,7 +64,7 @@ const LandingHeader = () => {
                 quality, timely services that leads to greater energy efficiency
                 and reduces operational costs for our customers.
               </Typography>
-              <Link to="/contact">
+              <Link to="/contact" style={{textDecoration:'none'}}>
               <Button
                 variant="contained"
                 sx={buttonSX}

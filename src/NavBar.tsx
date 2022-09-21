@@ -49,7 +49,7 @@ const NavBar: React.FC = () => {
       </Button>
       <Divider />
       <List>
-      <Link to="/">
+      <Link to="/" style={{textDecoration:'none'}}>
           <ListItem  disablePadding>
             <ListItemButton sx={{ textAlign: "center", color: "white" }}>
               <ListItemText

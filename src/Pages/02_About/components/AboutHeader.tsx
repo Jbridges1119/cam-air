@@ -10,6 +10,7 @@ const outterBoxSX = {
   width: "100%",
   boxSizing: "border-box",
   backgroundSize: "cover",
+  backgroundPosition:"25% 75%",
   display: "flex",
   overflowX: "hidden",
   pt: { sm: "10%", xs: "30%" },
