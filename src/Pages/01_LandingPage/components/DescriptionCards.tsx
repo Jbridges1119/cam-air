@@ -36,6 +36,7 @@ const cardList = cardInfo.map((card)=>{
                 borderRadius: 6,
                 
                 '&: hover': {
+                  boxShadow:"0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)"
                 }
               }}
             >
@@ -64,7 +65,7 @@ const cardList = cardInfo.map((card)=>{
                 </Grid>
 
                 <Grid item sm={8}>
-                  <Stack spacing={1} mx={4} pt={2}>
+                  <Stack spacing={1} mx={4} p={{xs:2.5, sm:0}}>
                     <Typography
                       variant="h6"
                       fontWeight={"bold"}
