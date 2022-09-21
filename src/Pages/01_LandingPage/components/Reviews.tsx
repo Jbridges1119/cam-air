@@ -86,7 +86,7 @@ const ReviewCarousel: React.FC = () => {
   });
 
   return (
-    <Box sx={{ ...flexCenterSX, my: 22, mx: 1 }}>
+    <Box sx={{ ...flexCenterSX, my: 10, mx: 1 }}>
       <Typography variant="h5" textAlign={"center"} m={5} color={"#002685"}>
         WHAT OUR CUSTOMERS HAVE TO SAY ABOUT US
       </Typography>
