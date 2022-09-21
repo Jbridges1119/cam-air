@@ -6,7 +6,7 @@ const companyList = [
   "- Air Conditioning",
   "- Refrigeration",
   "- Heating",
-  "- Maintenance",
+  "- Services",
   "- Contact",
 ];
 

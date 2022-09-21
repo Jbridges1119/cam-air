@@ -1,4 +1,5 @@
 import * as React from "react";
+//MUI
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -12,15 +13,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import logo from "./Assests/logo2.png";
 import { CardMedia } from "@mui/material";
+//Style
+import logo from "./Assests/logo2.png";
 const drawerWidth = 240;
 const navItems = [
   "About",
   "Air Conditioning",
   "Refrigeration",
   "Heating",
-  "Maintenance",
+  "Services",
   "Contact",
 ];
 
