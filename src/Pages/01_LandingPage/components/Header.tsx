@@ -42,7 +42,7 @@ const Header = () => {
           alignItems="center"
         >
           <Grid item xs={0} sm={1} md={0}></Grid>
-          <Grid item xs={10} sm={8} md={4.8} ml={2} mb={22}>
+          <Grid item xs={10} sm={8} md={4.8}  mb={20}>
             <Stack spacing={2}>
               <Typography
                 variant="h2"
@@ -52,7 +52,7 @@ const Header = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                Cam Air Refigeration and Heating provides commercial HVAC and
+                Cam Air Refrigeration and Heating provides commercial HVAC and
                 refrigeration.
               </Typography>
               <Typography
