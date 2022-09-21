@@ -1,75 +1,121 @@
 import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import AC from '../../../Assets/stock/AC.jpg'
+import AC from "../../../Assets/stock/AC.jpg";
+import refrigeration from "../../../Assets/stock/refrigeration.jpg";
+import heating from "../../../Assets/stock/heating.jpg"
+import tech from "../../../Assets/stock/tech.jpg"
+type cardInfoType = {
+  title: string;
+  desc: string;
+  pic: string;
+}[];
+
+const cardInfo: cardInfoType = [
+  {title:"AIR CONDITIONING", desc:`Our team of certified HVAC Technicians posses the knowledge,
+  skill and experience to tackle any of you A/C projects.`, pic: AC},
+  {title:"REFRIGERATION", desc:`From walk-in freezers to milk tanks, our refrigeration
+  service team are industry leaders.`, pic: refrigeration},
+  {title:"HEATING", desc:'With our experience with furnaces and heating products, we can make sure you stay warm during those cold winter days.', pic: heating},
+  {title:"SERVICES", desc:'Emergency repairs to preventative maintenance, Cam Air is ready to have your equipment running efficiently, so you can run your business be worry free.', pic: tech},
+];
+
+
+const cardList = cardInfo.map((card)=>{
+
+  
+  return (
+<Link to={""} style={{ display: "flex", justifyContent: "center", textDecoration: 'none' }}>
+            <Paper
+              elevation={5}
+              sx={{
+                width: "90%",
+                maxWidth: "600px",
+                height: "100%",
+                minHeight: "200px",
+                borderRadius: 6,
+                
+                '&: hover': {
+                }
+              }}
+            >
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item sm={4} xs={12} >
+                  <Box
+                    sx={{
+                      backgroundImage: `url(${card.pic})`,
+                      minHeight: "200px",
+                      width: "100%",
+                      height: "100%",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      display: "flex",
+                      borderTopLeftRadius: 21,
+                      borderTopRightRadius: {xs:21, sm:0},
+                      borderBottomLeftRadius: {sm:21, xs:0},
+                      justifyContent: "flex-end",
+                    }}
+                  />
+                </Grid>
+
+                <Grid item sm={8}>
+                  <Stack spacing={1} mx={4} pt={2}>
+                    <Typography
+                      variant="h6"
+                      fontWeight={"bold"}
+                      color={"#1976d2"}
+                    >
+                      {card.title}
+                    </Typography>
+                    <Typography variant="body1">
+                     {card.desc}
+                    </Typography>
+                  </Stack>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Link>
+)});
 
 const DescriptionCards = () => {
   return (
-    <Box sx={{width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
-    <Grid container sx={{maxWidth:'1200px', display:'flex', justifyContent:'center', alignItems:'center'}}>
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        mb:15
+      }}
+    >
       <Grid
-        item
-        lg={12}
-        md={12}
-        sm={12}
-        xs={12}
-        display={"grid"}
-        gridTemplateColumns={{
-          lg: "repeat(2, 1fr)",
-          xs: "repeat(1, 1fr)",
-       
+        container
+        sx={{
+          maxWidth: "1200px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-        gap={2}
-      ><Link to={""} >
-        <Paper elevation={5} sx={{width:'100%', height:'100%',minHeight:'150px', borderRadius:6}}>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Grid item sm={4}>
-            <Box sx={{backgroundImage:`url(${AC})`,minHeight:'150px', width: "100%",height:'100%',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              display: "flex",
-              borderTopLeftRadius:21,
-              borderBottomLeftRadius:21,
-              justifyContent: "flex-end",}}/>
-            </Grid>
-          
-          <Grid item sm={8} >
-            <Stack spacing={1} mx={2}>
-          <Typography variant='h6' fontWeight={'bold'} color={"#1976d2"} >AIR CONDITIONING</Typography>
-            <Typography variant='body1'>Our team of certified Technicians posses the knowledge, skill and experience to tackle any of you A/C projects</Typography></Stack>
-            </Grid>
-          </Grid>
-        </Paper></Link>
-
-
-        <Link to={""} >
-        <Paper elevation={5} sx={{height:'100%'}}>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Grid item md={3}>
-            <Box sx={{backgroundImage:`url(${AC})`,width: "100%",height:'100px',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              display: "flex",
-              justifyContent: "flex-end",}}/>
-            </Grid>
-          
-          <Grid item md={8}>
-            <Typography variant='body1'>From walk-in freezers to milk tanks, our refrigeration service team are industry leaders.</Typography>
-            </Grid>
-          </Grid>
-        </Paper></Link>
+      >
+        <Grid
+          item
+          xs={12}
+          display={"grid"}
+          gridTemplateColumns={{
+            lg: "repeat(2, 1fr)",
+            xs: "repeat(1, 1fr)",
+          }}
+          rowGap={6}
+        >
+          {cardList}
+        </Grid>
       </Grid>
-    </Grid></Box>
+    </Box>
   );
 };
 
