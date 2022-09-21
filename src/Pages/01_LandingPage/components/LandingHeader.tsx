@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 import banner from "../../../Assets/headers/main.jpg";
 
 const outterBoxSX = {
@@ -28,7 +29,7 @@ const buttonSX = {
   }
 }
 
-const Header = () => {
+const LandingHeader = () => {
   return (
     <Box
       sx={outterBoxSX}
@@ -63,12 +64,13 @@ const Header = () => {
                 quality, timely services that leads to greater energy efficiency
                 and reduces operational costs for our customers.
               </Typography>
+              <Link to="/contact">
               <Button
                 variant="contained"
                 sx={buttonSX}
               >
                 Schedule An Appointment
-              </Button>
+              </Button></Link>
             </Stack>
           </Grid>
         </Grid>
@@ -77,4 +79,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default LandingHeader;
