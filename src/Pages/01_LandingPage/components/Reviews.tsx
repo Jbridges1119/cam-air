@@ -86,7 +86,7 @@ type reviewType = {
 
   return (
     <Box
-      sx={{...flexCenterSX, m:1, }}
+      sx={{...flexCenterSX, my:16, }}
     >
       <Typography variant='h6' textAlign={'center'} m={1} color={"#002685"}>WHAT OUR CUSTOMERS HAVE TO SAY ABOUT US</Typography>
       <Paper elevation={5}
