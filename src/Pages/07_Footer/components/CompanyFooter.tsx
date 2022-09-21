@@ -1,22 +1,27 @@
 import React from 'react'
 //MUI
 import { Box, Button, Divider, Stack, Typography } from '@mui/material'
+import { Link } from 'react-router-dom';
 
 
-type companyListType = string[]
+type companyListType = {
+  text: string;
+  path: string;
+}[]
+
 
 const companyList: companyListType = [
-  "- About",
-  "- Air Conditioning",
-  "- Refrigeration",
-  "- Heating",
-  "- Services",
-  "- Contact",
+  {text: "- About", path: '/about'},
+  {text: "- Air Conditioning", path: '/air%20conditioning'},
+  {text: "- Refrigeration", path: '/refrigeration'},
+  {text: "- Heating", path: '/heating'},
+  {text: "- Services", path: '/services'},
+  {text: "- Contact", path: '/contact'},
 ];
 
 const buttonList = companyList.map((item) =>{
   return(
-  <Typography key={item} variant="h6" ><Button >{item}</Button></Typography>
+  <Typography key={item.text} variant="body1" ><Link style={{textDecoration:'none'}} to={item.path}>{item.text}</Link></Typography>
 )})
 
 const CompanyFooter = () => {

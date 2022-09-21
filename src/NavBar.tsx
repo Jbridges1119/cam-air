@@ -62,7 +62,7 @@ const NavBar: React.FC = () => {
             </ListItemButton>
           </ListItem></Link>
         {navItems.map((item) => (
-          <Link to={item.path} key={item.text}>
+          <Link to={item.path} key={item.text} style={{textDecoration:'none'}}>
           <ListItem  disablePadding>
             <ListItemButton sx={{ textAlign: "center", color: "white" }}>
               <ListItemText
@@ -143,7 +143,7 @@ const NavBar: React.FC = () => {
             ></Typography>
             <Box sx={{ display: { xs: "none", md: "block" }, mr: 2 }}>
               {navItems.map((item) => (
-                <Link to={item.path} key={item.text}>
+                <Link to={item.path} key={item.text} style={{textDecoration:'none'}}>
                 <Button
                   sx={{ color: "#7d7d7d", fontSize: "18px", mt: 2,
                   "&:hover": {
