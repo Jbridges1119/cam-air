@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 //MUI
-import { Box, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import Rating from "@mui/material/Rating";
 
 type reviewsType = {
@@ -61,10 +61,10 @@ type reviewType = {
 }
   const reviewList = reviews.map((review: reviewType) => {
     return (
-      <Carousel.Item>
+      <Carousel.Item >
         <Box
           sx={{
-            height: { xs: "450px", sm: "200px" },
+            height: { xs: "450px", sm: "300px" },
             width: "100%",
             ...flexCenterSX,
           }}
@@ -86,22 +86,24 @@ type reviewType = {
 
   return (
     <Box
-      sx={{...flexCenterSX, m:3}}
+      sx={{...flexCenterSX, m:1, }}
     >
-      <Box
+      <Typography variant='h6' textAlign={'center'} m={1} color={"#002685"}>WHAT OUR CUSTOMERS HAVE TO SAY ABOUT US</Typography>
+      <Paper elevation={5}
         sx={{
-          maxWidth: "1200px",
+          maxWidth: "1170px",
+          width:'90%',
         }}
       >
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
-          style={{ width: "100%", padding: 30 }}
-          controls={false}
+          style={{ width: "100%", paddingInline: '10%'}}
+          // controls={false}
         >
           {reviewList}
         </Carousel>
-      </Box>
+      </Paper>
     </Box>
   );
 };
