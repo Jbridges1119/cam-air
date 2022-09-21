@@ -16,14 +16,16 @@ import Button from "@mui/material/Button";
 import { CardMedia } from "@mui/material";
 //Style
 import logo from "./Assets/logo2.png";
+import { Link } from "react-router-dom";
+
 const drawerWidth = 240;
 const navItems = [
-  "About",
-  "Air Conditioning",
-  "Refrigeration",
-  "Heating",
-  "Services",
-  "Contact",
+  {text: "About", path: '/about'},
+  {text: "Air Conditioning", path: '/air%20conditioning'},
+  {text: "Refrigeration", path: '/refrigeration'},
+  {text: "Heating", path: '/heating'},
+  {text: "Services", path: '/services'},
+  {text: "Contact", path: '/contact'},
 ];
 
 const NavBar: React.FC = () => {
@@ -47,18 +49,31 @@ const NavBar: React.FC = () => {
       </Button>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+      <Link to="/">
+          <ListItem  disablePadding>
             <ListItemButton sx={{ textAlign: "center", color: "white" }}>
               <ListItemText
-                primary={item}
+                primary={"Home"}
                 primaryTypographyProps={{
                   fontSize: "22px",
                   fontWeight: "bold",
                 }}
               />
             </ListItemButton>
-          </ListItem>
+          </ListItem></Link>
+        {navItems.map((item) => (
+          <Link to={item.path} key={item.text}>
+          <ListItem  disablePadding>
+            <ListItemButton sx={{ textAlign: "center", color: "white" }}>
+              <ListItemText
+                primary={item.text}
+                primaryTypographyProps={{
+                  fontSize: "22px",
+                  fontWeight: "bold",
+                }}
+              />
+            </ListItemButton>
+          </ListItem></Link>
         ))}
       </List>
     </Box>
@@ -100,7 +115,7 @@ const NavBar: React.FC = () => {
               alignItems: "space-between",
               width: "100%",
             }}
-          >
+          ><Link to="/">
             <Button sx={{"&:hover": {
                   background: "none",
                 },}}>
@@ -110,7 +125,7 @@ const NavBar: React.FC = () => {
                 image={logo}
                 alt="Loading.."
               />
-            </Button>
+            </Button></Link>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -128,8 +143,8 @@ const NavBar: React.FC = () => {
             ></Typography>
             <Box sx={{ display: { xs: "none", md: "block" }, mr: 2 }}>
               {navItems.map((item) => (
+                <Link to={item.path} key={item.text}>
                 <Button
-                  key={item}
                   sx={{ color: "#7d7d7d", fontSize: "18px", mt: 2,
                   "&:hover": {
                     background: "none",
@@ -137,8 +152,8 @@ const NavBar: React.FC = () => {
                   },
                 }}
                 >
-                  {item}
-                </Button>
+                  {item.text}
+                </Button></Link>
               ))}
             </Box>
           </Toolbar>
