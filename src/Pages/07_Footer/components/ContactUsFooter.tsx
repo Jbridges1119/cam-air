@@ -1,5 +1,7 @@
-import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
+//MUI
+import { Box, Divider, Typography } from "@mui/material";
+
 
 const ContactUsFooter = () => {
   return (

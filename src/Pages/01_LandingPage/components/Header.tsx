@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-import banner from "../../../Assests/headers/main.jpg";
+import banner from "../../../Assets/headers/main.jpg";
 
 const outterBoxSX = {
   backgroundImage: `url(${banner})`,

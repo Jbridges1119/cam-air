@@ -1,7 +1,11 @@
-import { Box, Button, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
+//MUI
+import { Box, Button, Divider, Stack, Typography } from '@mui/material'
 
-const companyList = [
+
+type companyListType = string[]
+
+const companyList: companyListType = [
   "- About",
   "- Air Conditioning",
   "- Refrigeration",
@@ -12,7 +16,7 @@ const companyList = [
 
 const buttonList = companyList.map((item) =>{
   return(
-  <Typography variant="h6" ><Button >{item}</Button></Typography>
+  <Typography key={item} variant="h6" ><Button >{item}</Button></Typography>
 )})
 
 const CompanyFooter = () => {

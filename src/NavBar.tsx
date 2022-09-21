@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { CardMedia } from "@mui/material";
 //Style
-import logo from "./Assests/logo2.png";
+import logo from "./Assets/logo2.png";
 const drawerWidth = 240;
 const navItems = [
   "About",
@@ -28,7 +28,7 @@ const navItems = [
 
 const NavBar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const navBackgroundColor = "#02216E";
+  const navBackgroundColor = "#002685";
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };

@@ -1,5 +1,7 @@
 import React from 'react'
+//MUI
 import { Box, Button, Typography } from "@mui/material";
+
 const Banner = () => {
   return (
     <Box

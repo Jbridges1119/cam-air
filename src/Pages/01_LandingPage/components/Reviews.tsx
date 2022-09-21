@@ -9,7 +9,7 @@ import Rating from "@mui/material/Rating";
 type reviewsType = {
   name: string;
   review: string;
-}[]
+}[];
 const reviews: reviewsType = [
   {
     name: "Jonathan Harris",
@@ -49,19 +49,20 @@ const flexCenterSX = {
   justifyContent: "center",
   alignItems: "center",
 };
+type reviewType = {
+  name: string;
+  review: string;
+};
 const ReviewCarousel: React.FC = () => {
   const [index, setIndex] = useState(0);
   const value = 5;
   const handleSelect = (selectedIndex: any) => {
     setIndex(selectedIndex);
   };
-type reviewType = {
-  name: string;
-  review: string
-}
-  const reviewList = reviews.map((review: reviewType) => {
+
+  const reviewList = reviews.map((review: reviewType, i: number) => {
     return (
-      <Carousel.Item >
+      <Carousel.Item key={i}>
         <Box
           sx={{
             height: { xs: "450px", sm: "300px" },
@@ -85,20 +86,21 @@ type reviewType = {
   });
 
   return (
-    <Box
-      sx={{...flexCenterSX, my:16, }}
-    >
-      <Typography variant='h6' textAlign={'center'} m={1} color={"#002685"}>WHAT OUR CUSTOMERS HAVE TO SAY ABOUT US</Typography>
-      <Paper elevation={5}
+    <Box sx={{ ...flexCenterSX, my: 22, mx: 1 }}>
+      <Typography variant="h5" textAlign={"center"} m={5} color={"#002685"}>
+        WHAT OUR CUSTOMERS HAVE TO SAY ABOUT US
+      </Typography>
+      <Paper
+        elevation={5}
         sx={{
           maxWidth: "1170px",
-          width:'90%',
+          width: "90%",
         }}
       >
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
-          style={{ width: "100%", paddingInline: '10%'}}
+          style={{ width: "100%", paddingInline: "10%" }}
           // controls={false}
         >
           {reviewList}
