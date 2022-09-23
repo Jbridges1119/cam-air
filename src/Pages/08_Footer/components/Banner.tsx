@@ -10,7 +10,7 @@ const outerBoxSX = {
   justifyContent: "center",
   alignItems: "center",
   py: 4,
-  my:5
+  mb:5
 }
 const frameBoxSX = {
   display: "flex",
