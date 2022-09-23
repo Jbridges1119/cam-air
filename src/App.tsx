@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@mui/material";
-import Footer from "./Pages/07_Footer/Footer";
+import Footer from "./Pages/08_Footer/Footer";
 import NavBar from "./NavBar";
 import theme from "./Styles/theme";
 import LandingPage from "./Pages/01_LandingPage/LandingPage";
