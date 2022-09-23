@@ -68,7 +68,7 @@ const Form: React.FC = () => {
     setSubmitting(true);
     await postSubmission();
   };
-  console.log(formState);
+
 
   const postSubmission = async () => {
     const payload = {
@@ -76,27 +76,27 @@ const Form: React.FC = () => {
     };
     console.log("payload", payload);
 
-    // try {
-    //   await axios.post(
-    //     `https://formsubmit.co/ajax/jbridges1119@gmail.com`,
-    //     payload
-    //   );
-    //   setMessage([
-    //     "Message Was Sent!",
-    //     "We will get back to you as soon as possible.",
-    //     true,
-    //   ]);
-    //   setInputActive(false);
-    //   setFormState(initialFormState);
-    // } catch (error) {
-    //   console.log(error);
-    //   setMessage([
-    //     "Message Has Failed!",
-    //     "Uh oh, something went wrong. Maybe try calling or emailing us",
-    //     false,
-    //   ]);
-    //   setInputActive(false);
-    // }
+    try {
+      await axios.post(
+        `https://formsubmit.co/ajax/jbridges1119@gmail.com`,
+        payload
+      );
+      setMessage([
+        "Message Was Sent!",
+        "We will get back to you as soon as possible.",
+        true,
+      ]);
+      setInputActive(false);
+      setFormState(initialFormState);
+    } catch (error) {
+      console.log(error);
+      setMessage([
+        "Message Has Failed!",
+        "Uh oh, something went wrong. Maybe try calling or emailing us.",
+        false,
+      ]);
+      setInputActive(false);
+    }
   };
 
   //ChangeEvent is a generic type
@@ -112,13 +112,13 @@ const Form: React.FC = () => {
   };
 
   const formLabels = [
-    { item: "First Name", grid: 6, row: 1 },
-    { item: "Last Name", grid: 6, row: 1 },
-    { item: "Company Name", grid: 12, row: 1 },
-    { item: "Phone", grid: 6, row: 1 },
-    { item: "Email", grid: 6, row: 1 },
-    { item: "City", grid: 12, row: 1 },
-    { item: "How Can We Help", grid: 12, row: 6 },
+    { item: "First Name", grid: 6, row: 1,required:true },
+    { item: "Last Name", grid: 6, row: 1,required:true },
+    { item: "Company Name", grid: 12, row: 1,required:true },
+    { item: "Phone", grid: 6, row: 1,required:true },
+    { item: "Email", grid: 6, row: 1,required:true },
+    { item: "City", grid: 12, row: 1,required:false },
+    { item: "How Can We Help", grid: 12, row: 6,required:true },
   ];
   const formInputs = formLabels.map((input, i: number) => {
     const label = input as unknown as keyof FormState;
@@ -133,7 +133,7 @@ const Form: React.FC = () => {
           multiline
           rows={input.row}
           value={formState[label]}
-          required
+          required={input.required}
           disabled={submitting}
           sx={{
             "& .MuiOutlinedInput-root": {
@@ -152,7 +152,7 @@ const Form: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "#f0f0f0",
-        my: 4,
+        mt: 4,
         py: 6,
         width: "100%",
         display: "flex",
@@ -161,8 +161,14 @@ const Form: React.FC = () => {
       }}
     >
       <Box sx={{ maxWidth: "800px" }}>
+        <Typography variant="h4" fontWeight={'bold'}>Send us an email</Typography>
+        <Typography variant="h6" fontWeight={'lighter'} mb={6}>
+          Cam Air Refrigeration and Heating is ready to help. Our technicians can be on site right away if you have any emergencies that need immediate attention. We have the team and expertise you need with a personal level of service.
+
+        </Typography>
         {inputActive ? (
           <form noValidate autoComplete="off" onSubmit={submitForm}>
+            <Typography variant="body2" >* Required</Typography> 
             <Grid container display="flex" width="100%">
               {formInputs}
             </Grid>
@@ -177,7 +183,7 @@ const Form: React.FC = () => {
           </form>
         ) : (
           <Box
-            height={"400px"}
+            height={"582px"}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -207,14 +213,14 @@ const Form: React.FC = () => {
                   />
                 </>
               )}
-              <Typography mt={2} color={"#4345E8"} variant="h4">
+              <Typography mt={2} fontWeight={'bold'} variant="h4" textAlign={'center'}>
                 {message[0]}
               </Typography>
-              <Typography variant="h6">{message[1]}</Typography>
+              <Typography variant="h6" textAlign={'center'}>{message[1]}</Typography>
             </Stack>
           </Box>
         )}
-      </Box>{" "}
+      </Box>
     </Box>
   );
 };
