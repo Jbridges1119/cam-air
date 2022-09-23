@@ -23,7 +23,7 @@ const WhiteTypo = styled(Typography)`
 
 const pictureSX = {
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${location})`,
-  minHeight: "350px",
+  minHeight: "325px",
   width: "900px",
   maxWidth: { md: "900px", xs: "95%" },
   backgroundSize: "cover",
@@ -86,7 +86,7 @@ const LocationCard = () => {
           </FlexGrid>
           <FlexGrid item md={6} xs={12}>
             <PlainLink
-              href="https://www.google.com/maps/place/313+13+St+N,+Lethbridge,+AB+T1H+2R9/@49.7044425,-112.8175764,14z/data=!4m6!3m5!1s0x536e87ba0c37a4f5:0x6acfb0d294a296ad!8m2!3d49.7036411!4d-112.8236546!16s%2Fg%2F11bw49l3y4"
+              href="https://goo.gl/maps/gWWu2Dg71Jk96NYX9"
               target="_blank"
             >
               <WhiteTypoLink variant="body1">Get Directions</WhiteTypoLink>
