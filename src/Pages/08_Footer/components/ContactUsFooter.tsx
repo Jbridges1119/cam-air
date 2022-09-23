@@ -1,8 +1,13 @@
 import React from "react";
 //MUI
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Divider,styled,Typography } from "@mui/material";
 
-
+const LHTypo = styled(Typography)`
+line-height: 1.2;
+`
+const BoldTypo =  styled(Typography)`
+font-weight: bold;
+`
 const ContactUsFooter = () => {
   return (
     <Box p={3}>
@@ -10,37 +15,37 @@ const ContactUsFooter = () => {
         Contact Us
       </Typography>
       <Divider />
-      <Typography variant="body1" fontWeight="bold">
+      <BoldTypo variant="body1">
         Address
-      </Typography>
-      <Typography variant="subtitle1" sx={{ lineHeight: 1.2 }}>
+      </BoldTypo>
+      <LHTypo variant="subtitle1">
         313 13 St N, <br />
         Lethbridge, AB
         <br />
         T1H 2R9
-      </Typography>
-      <Typography variant="body1" fontWeight="bold">
+      </LHTypo>
+      <BoldTypo variant="body1">
         Phone
-      </Typography>
-      <Typography variant="subtitle1" sx={{ lineHeight: 1.2 }}>
+      </BoldTypo>
+      <LHTypo variant="subtitle1">
         Main 403-320-6690
         <br />
         Fax 403-327-1432
-      </Typography>
-      <Typography variant="body1" fontWeight="bold">
+      </LHTypo>
+      <BoldTypo variant="body1">
         Email
-      </Typography>
-      <Typography variant="subtitle1" sx={{ lineHeight: 1.2 }}>
+      </BoldTypo>
+      <LHTypo variant="subtitle1">
         Info@CamAirRefrigeration.com
-      </Typography>
-      <Typography variant="body1" fontWeight="bold">
+      </LHTypo>
+      <BoldTypo variant="body1">
         Business Hours
-      </Typography>
-      <Typography variant="subtitle1" sx={{ lineHeight: 1.2 }}>
+      </BoldTypo>
+      <LHTypo variant="subtitle1">
         Monday – Friday: 8:00 AM - 4:30 PM
         <br />
         24/7 Emergency Service
-      </Typography>
+      </LHTypo>
     </Box>
   );
 };

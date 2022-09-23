@@ -1,18 +1,18 @@
 import React from "react";
 //MUI
-import {
-  Box,
-  Button,
-  Divider,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 //Components
 import Banner from "./components/Banner";
 import SocialsFooter from "./components/SocialsFooter";
 import ContactUsFooter from "./components/ContactUsFooter";
 import CompanyFooter from "./components/CompanyFooter";
 
+const outerGridSX = {
+  maxWidth: "1200px",
+  direction: "row",
+  justifyContent: { sm: "space-between", xs: "center" },
+  alignItems: "flex-start",
+};
 const Footer = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
@@ -24,13 +24,7 @@ const Footer = () => {
           alignItems: "center",
         }}
       >
-        <Grid
-          container
-          direction="row"
-          justifyContent={{ sm: "space-between", xs: "center" }}
-          alignItems="flex-start"
-          sx={{ maxWidth: "1200px" }}
-        >
+        <Grid container sx={outerGridSX}>
           <Grid item md={3} sm={6} xs={10}>
             <ContactUsFooter />
           </Grid>

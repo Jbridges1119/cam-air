@@ -17,6 +17,8 @@ const iconSX = {
     color: theme.palette.primary.main,
   },
 };
+
+
 const GridSX = { display: "flex", justifyContent: "center" };
 const SocialsFooter = () => {
   return (

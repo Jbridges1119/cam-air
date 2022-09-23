@@ -29,7 +29,11 @@ const contactButtonSX = {
     background: "none",
   },
 }
-
+const textSX = {
+  m: 1.5,
+  color: "white",
+  textAlign: { xs: "center", sm: "left" },
+}
 const Banner = () => {
   return (
     <Box
@@ -40,11 +44,7 @@ const Banner = () => {
     >
       <Typography
         variant="h4"
-        sx={{
-          m: 1.5,
-          color: "white",
-          textAlign: { xs: "center", sm: "left" },
-        }}
+        sx={textSX}
       >
         Contact our expert team today for a FREE no-obligation consultation
       </Typography>
