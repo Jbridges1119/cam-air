@@ -1,13 +1,13 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import axios from "axios";
 //MUI
-import { Box, Button, Grid, Stack, TextField, Typography } from "@mui/material";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import { Box, Grid, Stack, styled, TextField, Typography } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import CloseIcon from "@mui/icons-material/Close";
 import theme from "../../../Styles/theme";
-//Style
+//reCaptcha
+import Recaptcha from "react-recaptcha";
 
 type FormState = {
   "First Name": string;
@@ -20,6 +20,16 @@ type FormState = {
 };
 
 type ServiceMessage = [string, string, boolean];
+
+const textFieldSX = {
+  "& .MuiOutlinedInput-root": {
+    "& > fieldset": { borderRadius: "10px" },
+  },
+  borderRadius: "10px",
+  backgroundColor: "white",
+  width: "100%",
+};
+
 const contactButtonSX = {
   background: theme.palette.primary.main,
   color: "white",
@@ -35,6 +45,36 @@ const contactButtonSX = {
     color: theme.palette.primary.main,
   },
 };
+const OuterBox = styled(Box)`
+  background-color: #f0f0f0;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const MessageBox = styled(Box)`
+display: "flex",
+justify-content: "center",
+align-items: "center",
+align-content: "center",
+height: '582px'
+`;
+const RedCloseIcon = styled(CloseIcon)`
+  color: red;
+  font-size: 4em;
+  height: 2em;
+  width: 100%;
+`;
+
+const GreenCheckCircleOutlineIcon = styled(CheckCircleOutlineIcon)`
+  color: green;
+  font-size: 6em;
+  height: 2em;
+  width: 100%;
+`;
 const Form: React.FC = () => {
   const initialFormState = {
     "First Name": "",
@@ -49,6 +89,8 @@ const Form: React.FC = () => {
   const [formState, setFormState] = useState<FormState>(initialFormState);
   const [message, setMessage] = useState<ServiceMessage>(["", "", true]);
   const [inputActive, setInputActive] = useState<boolean>(true);
+  const [captcha, setCaptcha] = useState<boolean>(false);
+  //Form logic
   const submitForm = async (event: FormEvent) => {
     event.preventDefault();
     if (!formState["First Name"]) return alert("Please enter your first name");
@@ -65,11 +107,15 @@ const Form: React.FC = () => {
       return alert("Please enter valid email so I can get back to you");
     if (!formState["How Can We Help"])
       return alert("Please leave us a message");
+    if (!captcha)
+      return alert("Are you a robot?");
     setSubmitting(true);
     await postSubmission();
   };
-
-
+  const recaotchaLoaded = () => {
+    setCaptcha(true);
+  };
+//Axios call with response to user
   const postSubmission = async () => {
     const payload = {
       ...formState,
@@ -112,13 +158,13 @@ const Form: React.FC = () => {
   };
 
   const formLabels = [
-    { item: "First Name", grid: 6, row: 1,required:true },
-    { item: "Last Name", grid: 6, row: 1,required:true },
-    { item: "Company Name", grid: 12, row: 1,required:true },
-    { item: "Phone", grid: 6, row: 1,required:true },
-    { item: "Email", grid: 6, row: 1,required:true },
-    { item: "City", grid: 12, row: 1,required:false },
-    { item: "How Can We Help", grid: 12, row: 6,required:true },
+    { item: "First Name", grid: 6, row: 1, required: true },
+    { item: "Last Name", grid: 6, row: 1, required: true },
+    { item: "Company Name", grid: 12, row: 1, required: true },
+    { item: "Phone", grid: 6, row: 1, required: true },
+    { item: "Email", grid: 6, row: 1, required: true },
+    { item: "City", grid: 12, row: 1, required: false },
+    { item: "How Can We Help", grid: 12, row: 6, required: true },
   ];
   const formInputs = formLabels.map((input, i: number) => {
     const label = input as unknown as keyof FormState;
@@ -135,44 +181,37 @@ const Form: React.FC = () => {
           value={formState[label]}
           required={input.required}
           disabled={submitting}
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              "& > fieldset": { borderRadius: "10px" },
-            },
-            borderRadius: "10px",
-            backgroundColor: "white",
-            width: "100%",
-          }}
+          sx={textFieldSX}
         />
       </Grid>
     );
   });
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "#f0f0f0",
-        mt: 4,
-        py: 6,
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <OuterBox>
       <Box sx={{ maxWidth: "800px" }}>
-        <Typography variant="h4" fontWeight={'bold'}>Send us an email</Typography>
-        <Typography variant="h6" fontWeight={'lighter'} mb={6}>
-          Cam Air Refrigeration and Heating is ready to help. Our technicians can be on site right away if you have any emergencies that need immediate attention. We have the team and expertise you need with a personal level of service.
-
+        <Typography variant="h4" fontWeight={"bold"}>
+          Send us an email
+        </Typography>
+        <Typography variant="h6" fontWeight={"lighter"} mb={6}>
+          Cam Air Refrigeration and Heating is ready to help. Our technicians
+          can be on site right away to rectify any emergencies that need
+          immediate attention. We have the team and expertise you need with a
+          personal level of service.
         </Typography>
         {inputActive ? (
           <form noValidate autoComplete="off" onSubmit={submitForm}>
-            <Typography variant="body2" >* Required</Typography> 
+            <Typography variant="body2">* Required</Typography>
             <Grid container display="flex" width="100%">
               {formInputs}
             </Grid>
-
+            <Box sx={{ ml: 1 }}>
+              <Recaptcha
+                sitekey={`${process.env.REACT_APP_RECAPTCHA_ID}`}
+                render="explicit"
+                onloadCallback={recaotchaLoaded}
+              />
+            </Box>
             <LoadingButton
               type="submit"
               sx={contactButtonSX}
@@ -182,46 +221,25 @@ const Form: React.FC = () => {
             </LoadingButton>
           </form>
         ) : (
-          <Box
-            height={"582px"}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              alignContent: "center",
-            }}
-          >
+          <MessageBox>
             <Stack spacing={3}>
-              {message[2] ? (
-                <CheckCircleOutlineIcon
-                  sx={{
-                    color: "green",
-                    fontSize: "6em",
-                    height: "2em",
-                    width: "100%",
-                  }}
-                />
-              ) : (
-                <>
-                  <CloseIcon
-                    sx={{
-                      color: "red",
-                      fontSize: "4em",
-                      height: "2em",
-                      width: "100%",
-                    }}
-                  />
-                </>
-              )}
-              <Typography mt={2} fontWeight={'bold'} variant="h4" textAlign={'center'}>
+              {message[2] ? <GreenCheckCircleOutlineIcon /> : <RedCloseIcon />}
+              <Typography
+                mt={2}
+                fontWeight={"bold"}
+                variant="h4"
+                textAlign={"center"}
+              >
                 {message[0]}
               </Typography>
-              <Typography variant="h6" textAlign={'center'}>{message[1]}</Typography>
+              <Typography variant="h6" textAlign={"center"}>
+                {message[1]}
+              </Typography>
             </Stack>
-          </Box>
+          </MessageBox>
         )}
       </Box>
-    </Box>
+    </OuterBox>
   );
 };
 
