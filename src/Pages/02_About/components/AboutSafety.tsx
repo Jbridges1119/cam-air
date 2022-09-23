@@ -1,23 +1,35 @@
 import { Box, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 import family from "../../../Assets/stock/family.jpg";
+
+const flexCenterSX = {
+  display: "flex",
+  justifyContent: "center",
+  alignContent: "center",
+  alignItems: "center",
+};
+
+const familyPictureSX = {
+  backgroundImage: `url(${family})`,
+  height: "300px",
+  width: "100%",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  display: "flex",
+  justifyContent: "flex-end",
+};
+
+const frameBoxSX = {
+  maxWidth: "1200px",
+  width: { xs: "90%", lg: "100%" },
+  display: "flex",
+  flexDirection: "column",
+};
+
 const AboutSafety = () => {
-  const flexCenterSX = {
-    display: "flex",
-    justifyContent: "center",
-    alignContent: "center",
-    alignItems: "center",
-  };
   return (
     <Box sx={{ ...flexCenterSX, mt: 6 }}>
-      <Box
-        sx={{
-          maxWidth: "1200px",
-          width: {xs:"90%",lg:'100%'},
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <Box sx={frameBoxSX}>
         <Typography variant="h3" fontWeight={"bold"} py={2}>
           We believe everyone has the right to go home when the job is done and
           one accident is one too many.
@@ -45,17 +57,9 @@ const AboutSafety = () => {
             </Typography>
           </Grid>
           <Grid item sm={5} xs={12}>
-            <CardMedia
-              sx={{
-                backgroundImage: `url(${family})`,
-                height: "300px",
-                width: "100%",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            />
+            <Box 
+            
+            sx={familyPictureSX} />
           </Grid>{" "}
         </Grid>
 

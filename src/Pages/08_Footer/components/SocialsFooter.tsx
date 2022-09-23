@@ -6,14 +6,15 @@ import logo from "../../../Assets/logo2.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import theme from "../../../Styles/theme";
 
 const iconSX = {
   height: "60px",
   width: "100%",
-  color: "#7d7d7d",
+  color: theme.palette.info.main,
   "&:hover": {
     background: "none",
-    color: "#1976d2",
+    color: theme.palette.primary.main,
   },
 };
 const GridSX = { display: "flex", justifyContent: "center" };

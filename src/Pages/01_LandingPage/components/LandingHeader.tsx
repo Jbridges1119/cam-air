@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import banner from "../../../Assets/headers/main.jpg";
 
-const outterBoxSX = {
+const outerBoxSX = {
   backgroundImage: `url(${banner})`,
   minHeight: "50vh",
   width: "100%",
@@ -32,7 +32,7 @@ const buttonSX = {
 const LandingHeader = () => {
   return (
     <Box
-      sx={outterBoxSX}
+      sx={outerBoxSX}
     >
       <Box sx={{ maxWidth: "1400px" }}>
         <Grid

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 //MUI
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -16,7 +17,7 @@ import Button from "@mui/material/Button";
 import { CardMedia } from "@mui/material";
 //Style
 import logo from "./Assets/logo2.png";
-import { Link } from "react-router-dom";
+import theme from "./Styles/theme";
 
 const drawerWidth = 240;
 const navItems = [
@@ -30,7 +31,7 @@ const navItems = [
 
 const NavBar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const navBackgroundColor = "#002685";
+  const navBackgroundColor = theme.palette.secondary.main;
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -121,7 +122,7 @@ const NavBar: React.FC = () => {
                 },}}>
               <CardMedia
                 component="img"
-                sx={{ height: "50px", ml: { sm: 2, xs: 0.5 }, }}
+                sx={{ height: "50px", ml: { lg:0, md: 2, xs: 0.5 }, }}
                 image={logo}
                 alt="Loading.."
               />
@@ -141,14 +142,14 @@ const NavBar: React.FC = () => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "none", md: "block" } }}
             ></Typography>
-            <Box sx={{ display: { xs: "none", md: "block" }, mr: 2 }}>
+            <Box sx={{ display: { xs: "none", md: "block" }, mr: {md:2, lg:0} }}>
               {navItems.map((item) => (
                 <Link to={item.path} key={item.text} style={{textDecoration:'none'}}>
                 <Button
-                  sx={{ color: "#7d7d7d", fontSize: "18px", mt: 2,
+                  sx={{ color: theme.palette.info.main, fontSize: "18px", mt: 2,
                   "&:hover": {
                     background: "none",
-                    color:'#1976d2'
+                    color:theme.palette.primary.main
                   },
                 }}
                 >

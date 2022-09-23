@@ -31,7 +31,7 @@ const ContactUsFooter = () => {
         Email
       </Typography>
       <Typography variant="subtitle1" sx={{ lineHeight: 1.2 }}>
-        info@camairrefrigeration.com
+        Info@CamAirRefrigeration.com
       </Typography>
       <Typography variant="body1" fontWeight="bold">
         Business Hours

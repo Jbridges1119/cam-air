@@ -2,16 +2,41 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 //Style
 import warmDay from "../../../Assets/stock/warmDay.jpg";
+import theme from "../../../Styles/theme";
 
 const bannerHeightSX = { height: "600px" };
+const backgroundColor: string = theme.palette.secondary.main
+const backgroundBoxSX = {
+  width:"100%",
+  background: backgroundColor,
+  ...bannerHeightSX,
+}
+
+const pictureSX = {
+  backgroundImage: `url(${warmDay})`,
+  ...bannerHeightSX,
+  width: "100%",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  display: "flex",
+  justifyContent: "flex-end",
+}
+const pictureAngleSX = {
+  clipPath: `polygon(0 0, 100% 0%, 100% 100%, 100% 100%)`,
+  ...bannerHeightSX,
+  width: "20%",
+  background: backgroundColor
+}
+const textStackSX = {
+  my: { sm: 4, xs: 0 },
+  py: { xs: 4, lg: 10 },
+  maxWidth: "550px",
+  mx: 4,
+}
 const AboutBanner = () => {
   return (
     <Box
-      sx={{
-        width:"100%",
-        background: "#002685",
-        ...bannerHeightSX,
-      }}
+      sx={backgroundBoxSX}
     >
       <Grid
         container
@@ -21,23 +46,10 @@ const AboutBanner = () => {
       >
         <Grid item xs={0} md={6}>
           <Box
-            sx={{
-              backgroundImage: `url(${warmDay})`,
-              ...bannerHeightSX,
-              width: "100%",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
+            sx={pictureSX}
           >
             <Box
-              sx={{
-                clipPath: `polygon(0 0, 100% 0%, 100% 100%, 100% 100%)`,
-                ...bannerHeightSX,
-                width: "20%",
-                background: "#002685",
-              }}
+              sx={pictureAngleSX}
             ></Box>
           </Box>
         </Grid>
@@ -50,12 +62,7 @@ const AboutBanner = () => {
           >
             <Stack
               spacing={3}
-              sx={{
-                my: { sm: 4, xs: 0 },
-                py: { xs: 4, lg: 10 },
-                maxWidth: "550px",
-                mx: 4,
-              }}
+              sx={textStackSX}
             >
               <Typography
                 variant="h6"

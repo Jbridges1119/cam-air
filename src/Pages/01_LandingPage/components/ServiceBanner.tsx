@@ -3,15 +3,35 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 //Style
 import tools from "../../../Assets/stock/tools.jpg";
+import theme from "../../../Styles/theme";
 
 const bannerHeightSX = { height: "600px" };
+const backgroundColor: string = theme.palette.secondary.main
+const pictureAngleSX = {
+  clipPath: `polygon(0 0, 100% 0%, 100% 100%, 100% 100%)`,
+  ...bannerHeightSX,
+  width: "20%",
+  background: "#002685",
+}
+
+const pictureSX = {
+  backgroundImage: `url(${tools})`,
+  ...bannerHeightSX,
+  width: "100%",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  display: "flex",
+  justifyContent: "flex-end",
+}
+
+const backgroundBoxSX = {
+  background: backgroundColor,
+  ...bannerHeightSX,
+}
 const ServiceBanner = () => {
   return (
     <Box
-      sx={{
-        background: "#002685",
-        ...bannerHeightSX,
-      }}
+      sx={backgroundBoxSX}
     >
       <Grid
         container
@@ -21,23 +41,10 @@ const ServiceBanner = () => {
       >
         <Grid item xs={0} md={6}>
           <Box
-            sx={{
-              backgroundImage: `url(${tools})`,
-              ...bannerHeightSX,
-              width: "100%",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
+            sx={pictureSX}
           >
             <Box
-              sx={{
-                clipPath: `polygon(0 0, 100% 0%, 100% 100%, 100% 100%)`,
-                ...bannerHeightSX,
-                width: "20%",
-                background: "#002685",
-              }}
+              sx={pictureAngleSX}
             ></Box>
           </Box>
         </Grid>

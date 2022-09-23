@@ -1,13 +1,15 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
+const flexCenterSX = {
+  display:'flex',
+  justifyContent:'center',
+  alignContent:'center',
+  alignItems:'center'
+}
+
 const Introduction = () => {
-  const flexCenterSX = {
-    display:'flex',
-    justifyContent:'center',
-    alignContent:'center',
-    alignItems:'center'
-  }
+
   return (
     <Box sx={{...flexCenterSX, mt:6}}>
       <Box sx={{ width:'600px'}}>

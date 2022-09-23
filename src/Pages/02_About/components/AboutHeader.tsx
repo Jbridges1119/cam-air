@@ -4,7 +4,7 @@ import { Box, Grid, Typography } from "@mui/material";
 //Style
 import banner from "../../../Assets/headers/aboutUs.jpg";
 
-const outterBoxSX = {
+const outerBoxSX = {
   backgroundImage: `url(${banner})`,
   minHeight: "50vh",
   width: "100%",
@@ -22,7 +22,7 @@ const outterBoxSX = {
 
 const AboutHeader = () => {
   return (
-    <Box sx={outterBoxSX}>
+    <Box sx={outerBoxSX}>
       <Box sx={{ maxWidth: "1200px", width: "100%" }}>
         <Grid
           container

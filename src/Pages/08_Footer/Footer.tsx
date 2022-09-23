@@ -31,13 +31,13 @@ const Footer = () => {
           alignItems="flex-start"
           sx={{ maxWidth: "1200px" }}
         >
-          <Grid item lg={3} md={3} sm={6} xs={10}>
+          <Grid item md={3} sm={6} xs={10}>
             <ContactUsFooter />
           </Grid>
-          <Grid item lg={3} md={3} sm={6} xs={10}>
+          <Grid item md={3} sm={6} xs={10}>
             <CompanyFooter />
           </Grid>
-          <Grid item lg={3} md={3} sm={6} xs={10}>
+          <Grid item md={3} sm={6} xs={10}>
             <SocialsFooter />
           </Grid>
         </Grid>
