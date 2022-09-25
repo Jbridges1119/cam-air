@@ -22,7 +22,7 @@ import theme from "./Styles/theme";
 const drawerWidth = 240;
 const navItems = [
   {text: "About", path: '/about'},
-  {text: "Air Conditioning", path: '/air%20conditioning'},
+  {text: "Air Conditioning", path: '/airconditioning'},
   {text: "Refrigeration", path: '/refrigeration'},
   {text: "Heating", path: '/heating'},
   {text: "Services", path: '/services'},

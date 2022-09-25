@@ -2,10 +2,10 @@ import React from "react";
 //MUI
 import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 //Components
-import Banner from "./components/Banner";
-import SocialsFooter from "./components/SocialsFooter";
-import ContactUsFooter from "./components/ContactUsFooter";
-import CompanyFooter from "./components/CompanyFooter";
+import Banner from "./components/FooterBanner";
+import SocialsFooter from "./components/FooterSocials";
+import ContactUsFooter from "./components/FooterContactUs";
+import CompanyFooter from "./components/FooterCompany";
 
 const outerGridSX = {
   maxWidth: "1200px",

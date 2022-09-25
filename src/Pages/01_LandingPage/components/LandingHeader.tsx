@@ -64,13 +64,14 @@ const LandingHeader = () => {
                 quality, timely services that leads to greater energy efficiency
                 and reduces operational costs for our customers.
               </Typography>
+              <Box sx={{display:'flex', justifyContent:{xs:'center', sm:'flex-start'}}}>
               <Link to="/contact" style={{textDecoration:'none'}}>
               <Button
                 variant="contained"
                 sx={buttonSX}
               >
                 Schedule An Appointment
-              </Button></Link>
+              </Button></Link></Box>
             </Stack>
           </Grid>
         </Grid>

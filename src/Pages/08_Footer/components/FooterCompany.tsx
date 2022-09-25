@@ -12,7 +12,7 @@ type companyListType = {
 
 const companyList: companyListType = [
   {text: "- About", path: '/about'},
-  {text: "- Air Conditioning", path: '/air%20conditioning'},
+  {text: "- Air Conditioning", path: '/airconditioning'},
   {text: "- Refrigeration", path: '/refrigeration'},
   {text: "- Heating", path: '/heating'},
   {text: "- Services", path: '/services'},

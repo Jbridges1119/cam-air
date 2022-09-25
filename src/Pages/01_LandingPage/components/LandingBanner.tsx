@@ -28,6 +28,12 @@ const backgroundBoxSX = {
   background: backgroundColor,
   ...bannerHeightSX,
 }
+const textBoxSX = {
+  ...bannerHeightSX,
+  width: "100%",
+  display:'flex',
+  alignItems:'center'
+}
 const ServiceBanner = () => {
   return (
     <Box
@@ -50,10 +56,7 @@ const ServiceBanner = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box
-            sx={{
-              ...bannerHeightSX,
-              width: "100%",
-            }}
+            sx={textBoxSX}
           >
             <Stack
               spacing={4}
