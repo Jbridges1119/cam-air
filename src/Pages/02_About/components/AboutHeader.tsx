@@ -19,7 +19,11 @@ const outerBoxSX = {
   justifyContent: "center",
   alignItems: "center",
 };
-
+const titleSX = {
+  color: "white",
+  fontWeight: "bold",
+  textAlign: { xs: "center", sm: "left" },
+}
 const AboutHeader = () => {
   return (
     <Box sx={outerBoxSX}>
@@ -33,11 +37,7 @@ const AboutHeader = () => {
           <Grid item xs={10} sm={12} md={6} px={5} my={20}>
             <Typography
               variant="h1"
-              sx={{
-                color: "white",
-                fontWeight: "bold",
-                textAlign: { xs: "center", sm: "left" },
-              }}
+              sx={titleSX}
             >
               About Us
             </Typography>
