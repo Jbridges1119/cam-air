@@ -42,7 +42,6 @@ const AboutSafety = () => {
         >
           <Grid item sm={7} xs={12}>
             <Typography variant="h6" fontWeight={"lighter"} mb={4}>
-              {" "}
               Health and safety is an integral part of our corporate culture,
               from the owner to the staff everyone is responsible for ensuring
               the health and safety of our employees, subcontractors, clients
@@ -57,10 +56,8 @@ const AboutSafety = () => {
             </Typography>
           </Grid>
           <Grid item sm={5} xs={12}>
-            <Box 
-            
-            sx={familyPictureSX} />
-          </Grid>{" "}
+            <Box sx={familyPictureSX} />
+          </Grid>
         </Grid>
 
         <Typography variant="h4" fontWeight={"bold"} py={2}>
