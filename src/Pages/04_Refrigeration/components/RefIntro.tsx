@@ -27,7 +27,7 @@ const familyPictureSX = {
   width: "100%",
   backgroundSize: "cover",
   backgroundPosition: "center",
-  my: 5,
+  my: 2,
 };
 
 const RepeatedText = styled(Typography)`
@@ -81,17 +81,17 @@ const RefIntro = () => {
           container
           direction="row"
           justifyContent="center"
-          alignItems="flex-start"
+          alignItems="center"
         >
           <Grid item xs={12} md={5.5}>
             <Box sx={familyPictureSX} />
           </Grid>
           <Grid item xs={0} md={1} />
           <Grid item xs={12} md={5.5}>
-            <Typography variant="h5" fontWeight={"bold"} pt={3}>
+            <Typography variant="h5" fontWeight={"bold"} pt={3} pb={2}>
               We can help with your commercial refrigeration service:
             </Typography>
-            <Typography variant="h6" fontWeight={"lighter"} mb={10}>
+            <Typography variant="h6" fontWeight={"lighter"} mb={6}>
               <ul>
                 {refServiceList.map((item: string, i: number) => {
                   return <li key={i}>{item}</li>;

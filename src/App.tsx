@@ -8,6 +8,7 @@ import About from './Pages/02_About/About'
 import Contact from './Pages/07_Contact/Contact'
 import ScrollToTop from "./Hooks/ScrollToTop";
 import Refrigeration from "./Pages/04_Refrigeration/Refrigeration";
+import AirConditioning from "./Pages/03_AirConditioning/AirConditioning";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/about" element={<About/>} />
+      <Route path="/airconditioning" element={<AirConditioning/>} />
       <Route path="/refrigeration" element={<Refrigeration/>} />
       <Route path="/contact" element={<Contact/>} />
       </Routes>
