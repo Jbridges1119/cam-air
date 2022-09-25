@@ -51,7 +51,7 @@ const AboutSafety = () => {
               <br />
               By providing resources and training, encouraging teamwork,
               reinforcing positive behaviors, incorporating applicable
-              legislation and adopting industry best practices, Gateway
+              legislation and adopting industry best practices, Cam Air
               continuously monitors, audits and improves our health and safety
               program.
             </Typography>
