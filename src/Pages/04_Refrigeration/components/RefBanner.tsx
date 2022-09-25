@@ -54,6 +54,13 @@ font-weight: lighter;
 padding-bottom: 10px
 `;
 
+const textBoxSX = {
+  ...bannerHeightSX,
+  width: "100%",
+  display:'flex',
+  alignItems:'center'
+}
+
 const RefBanner = () => {
   return (
     <Box sx={backgroundBoxSX}>
@@ -70,10 +77,7 @@ const RefBanner = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box
-            sx={{
-              ...bannerHeightSX,
-              width: "100%",
-            }}
+            sx={textBoxSX}
           >
             <Stack spacing={1} sx={textStackSX}>
               <Typography

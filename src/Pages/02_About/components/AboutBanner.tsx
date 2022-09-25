@@ -33,6 +33,14 @@ const textStackSX = {
   maxWidth: "550px",
   mx: 4,
 }
+
+const textBoxSX = {
+  ...bannerHeightSX,
+  width: "100%",
+  display:'flex',
+  alignItems:'center'
+}
+
 const AboutBanner = () => {
   return (
     <Box
@@ -55,23 +63,20 @@ const AboutBanner = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box
-            sx={{
-              ...bannerHeightSX,
-              width: "100%",
-            }}
+            sx={textBoxSX}
           >
             <Stack
               spacing={3}
               sx={textStackSX}
             >
               <Typography
-                variant="h6"
+                variant="h5"
                 sx={{ color: "white", fontWeight: "lighter" }}
               >
                 Helping other small businesses achieve their goals
               </Typography>
               <Typography
-                variant="h5"
+                variant="h4"
                 sx={{ color: "white", fontWeight: "bold" }}
               >
                 Work is not just something we do, it’s what we love.
