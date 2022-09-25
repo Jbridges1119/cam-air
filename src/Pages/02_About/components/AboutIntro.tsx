@@ -5,17 +5,18 @@ const flexCenterSX = {
   display:'flex',
   justifyContent:'center',
   alignContent:'center',
-  alignItems:'center'
+  alignItems:'center',
+  mt:6
 }
-
+const textBoxSX = {maxWidth:'1200px',
+width: {xs:"90%",lg:'100%'},
+display: "flex",
+flexDirection: "column",}
 const AboutIntro = () => {
 
   return (
-    <Box sx={{...flexCenterSX, mt:6}}>
-      <Box sx={{maxWidth:'1200px',
-          width: {xs:"90%",lg:'100%'},
-          display: "flex",
-          flexDirection: "column",}}>
+    <Box sx={{...flexCenterSX}}>
+      <Box sx={textBoxSX}>
       <Typography variant='h6' color={"#002685"}>A Local business. Serving local businesses</Typography>
       
       <Typography variant='h3'   fontWeight={'bold'} py={2}>At Cam Air, we’re focused on providing the best possible customer service in safe, effective, and innovative ways.</Typography>

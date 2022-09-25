@@ -12,7 +12,7 @@ const Introduction = () => {
 
   return (
     <Box sx={{...flexCenterSX, mt:6}}>
-      <Box sx={{ width:'600px'}}>
+      <Box sx={{ maxWidth:'600px',width: "90%"}}>
       <Typography variant='h6' textAlign={'center'} color={"#002685"}>COMMERCIAL HEATING, COOLING & REFRIGERATION SERVICES</Typography>
       
       <Typography variant='h4' textAlign={'center'}  fontWeight={'bold'} py={2}>Industry expertise you need with a personal level of service.</Typography>

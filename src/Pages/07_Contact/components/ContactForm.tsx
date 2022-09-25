@@ -33,7 +33,7 @@ const textFieldSX = {
 const contactButtonSX = {
   background: theme.palette.primary.main,
   color: "white",
-  m: 1.5,
+  my: 1.5,
   fontSize: { sm: "20px", xs: "20px" },
   fontWeight: "lighter",
   py: 1.5,
@@ -169,7 +169,7 @@ const Form: React.FC = () => {
   const formInputs = formLabels.map((input, i: number) => {
     const label = input as unknown as keyof FormState;
     return (
-      <Grid item xs={12} md={input.grid} sx={{ p: 1, width: "100%" }} key={i}>
+      <Grid item xs={12} md={input.grid} sx={{ py: 1, width: "100%" }} key={i}>
         <TextField
           key={label}
           id={input.item}
@@ -189,7 +189,7 @@ const Form: React.FC = () => {
 
   return (
     <OuterBox>
-      <Box sx={{ maxWidth: "800px" }}>
+      <Box sx={{ maxWidth: "800px", width:'90%' }}>
         <Typography variant="h4" fontWeight={"bold"}>
           Send us an email
         </Typography>
@@ -205,13 +205,13 @@ const Form: React.FC = () => {
             <Grid container display="flex" width="100%">
               {formInputs}
             </Grid>
-            <Box sx={{ ml: 1 }}>
+            
               <Recaptcha
                 sitekey={`${process.env.REACT_APP_RECAPTCHA_ID}`}
                 render="explicit"
                 onloadCallback={recaotchaLoaded}
               />
-            </Box>
+            
             <LoadingButton
               type="submit"
               sx={contactButtonSX}

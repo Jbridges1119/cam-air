@@ -40,7 +40,7 @@ const AboutSafety = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item sm={7} xs={11}>
+          <Grid item sm={7} xs={12}>
             <Typography variant="h6" fontWeight={"lighter"} mb={4}>
               {" "}
               Health and safety is an integral part of our corporate culture,

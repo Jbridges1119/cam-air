@@ -25,7 +25,7 @@ const pictureSX = {
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${location})`,
   minHeight: "325px",
   width: "900px",
-  maxWidth: { md: "900px", xs: "95%" },
+  maxWidth: { md: "900px", xs: "100%" },
   backgroundSize: "cover",
   backgroundPosition: "center",
   display: "flex",
