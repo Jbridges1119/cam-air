@@ -16,8 +16,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+       
       <NavBar />
-      <ScrollToTop>
+     
       <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/about" element={<About/>} />
@@ -27,8 +28,9 @@ function App() {
       <Route path="/services" element={<Services/>} />
       <Route path="/contact" element={<Contact/>} />
       </Routes>
-      </ScrollToTop>
+    
       <Footer />
+      
     </ThemeProvider>
   );
 }
