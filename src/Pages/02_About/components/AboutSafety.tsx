@@ -1,4 +1,4 @@
-import { Box, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, CardMedia, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import family from "../../../Assets/stock/family.jpg";
 
@@ -56,7 +56,7 @@ const AboutSafety = () => {
             </Typography>
           </Grid>
           <Grid item sm={5} xs={12}>
-            <Box sx={familyPictureSX} />
+            <Paper elevation={4} sx={familyPictureSX} />
           </Grid>
         </Grid>
 

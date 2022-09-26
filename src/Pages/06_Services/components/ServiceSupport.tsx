@@ -1,6 +1,6 @@
 import React from "react";
 //MUI
-import { Box, Grid, Link, Typography } from "@mui/material";
+import { Box, Grid, Link, Typography, Paper } from "@mui/material";
 //Style
 import emergency from "../../../Assets/stock/emergency.jpg";
 
@@ -9,6 +9,7 @@ const flexCenterSX = {
   justifyContent: "center",
   alignContent: "center",
   alignItems: "center",
+  mb:10
 };
 
 const familyPictureSX = {
@@ -30,7 +31,7 @@ const frameBoxSX = {
 
 const ServiceSupport = () => {
   return (
-    <Box sx={{ ...flexCenterSX, mt: 6 }}>
+    <Box sx={{ ...flexCenterSX }}>
       <Box sx={frameBoxSX}>
         <Typography variant="h4" fontWeight={"bold"} py={2}>
           Have an HVAC/Refrigeration emergency?
@@ -54,10 +55,9 @@ const ServiceSupport = () => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          mb={10}
         >
           <Grid item sm={4} xs={12}>
-            <Box sx={familyPictureSX} />
+            <Paper elevation={4} sx={familyPictureSX} />
           </Grid>
           <Grid item sm={1} xs={0} />
           <Grid item sm={7} xs={12}>

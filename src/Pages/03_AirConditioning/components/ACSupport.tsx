@@ -1,6 +1,6 @@
 import React from "react";
 //MUI
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 //Style
 import acBuilding from "../../../Assets/stock/acBuilding.jpg";
 import { Link } from "react-router-dom";
@@ -77,7 +77,7 @@ const ACSupport = () => {
           mb={10}
         >
           <Grid item sm={5.5} xs={12}>
-            <Box sx={familyPictureSX} />
+            <Paper elevation={4} sx={familyPictureSX} />
           </Grid>
           <Grid item sm={1} xs={0} />
           <Grid item sm={5.5} xs={12}>

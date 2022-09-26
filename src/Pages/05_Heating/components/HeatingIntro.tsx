@@ -1,6 +1,6 @@
 import React from "react";
 //MUI
-import { Box, Typography, Grid, styled } from "@mui/material";
+import { Box, Typography, Grid, styled, Paper } from "@mui/material";
 //React-Router-Dom
 import { Link } from "react-router-dom";
 //Style
@@ -81,7 +81,7 @@ const HeatingIntro = () => {
           alignItems="center"
         >
           <Grid item xs={12} md={5.5}>
-            <Box sx={familyPictureSX} />
+            <Paper elevation={4} sx={familyPictureSX} />
           </Grid>
           <Grid item xs={0} md={1} />
           <Grid item xs={12} md={5.5}>
