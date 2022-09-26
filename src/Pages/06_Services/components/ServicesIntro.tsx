@@ -38,16 +38,22 @@ const RepeatedText = styled(Typography)`
 `;
 
 const SecondTitle = styled(Typography)`
-font-weight: bold;
-padding-top: 20px;
-padding-bottom: 15px;
-`
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 15px;
+`;
 const BlueBoldText = styled(Typography)`
-font-size:25px;
-font-weight: bold;
-color: ${theme.palette.secondary.main}
-`
-const paperSX = {height: '250px', display:'flex', justifyContent:'center', alignItems:'center', my:2}
+  font-size: 25px;
+  font-weight: bold;
+  color: ${theme.palette.secondary.main};
+`;
+const paperSX = {
+  height: "250px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  my: 2,
+};
 
 const HeatingIntro = () => {
   return (
@@ -81,7 +87,7 @@ const HeatingIntro = () => {
           alignItems="center"
         >
           <Grid item xs={12} md={5.5}>
-            <SecondTitle variant="h5" >
+            <SecondTitle variant="h5">
               HVAC/Refrigeration maintenance programs to fit your needs and your
               budget
             </SecondTitle>
@@ -98,10 +104,10 @@ const HeatingIntro = () => {
               equipment keep large emergency breakdown costs, and equipment down
               time, drastically reduced.
               <br />
-              <br /> 
-                <Link to="/contact" > Contact us today</Link>
-                &nbsp;and we’ll design a custom maintenance program
-              that is tailored to your equipment needs.
+              <br />
+              <Link to="/contact"> Contact us today</Link>
+              &nbsp;and we’ll design a custom maintenance program that is
+              tailored to your equipment needs.
             </Typography>
           </Grid>
           <Grid item xs={0} md={1} />
@@ -110,9 +116,7 @@ const HeatingIntro = () => {
           </Grid>
         </Grid>
 
-        <SecondTitle variant="h4">
-          Did you know?
-        </SecondTitle>
+        <SecondTitle variant="h4">Did you know?</SecondTitle>
         <Grid
           container
           direction="row"
@@ -121,24 +125,26 @@ const HeatingIntro = () => {
           mb={6}
         >
           <Grid item xs={12} md={3}>
-            <Paper elevation={8} sx={{...paperSX, p:6}}>
-              <Typography variant="h6"  textAlign={'center'}>
-                Unscheduled repairs often cost <BlueBoldText>25% MORE</BlueBoldText> than scheduled
-                maintenance
+            <Paper elevation={8} sx={{ ...paperSX, p: 6 }}>
+              <Typography variant="h6" textAlign={"center"}>
+                Unscheduled repairs often cost{" "}
+                <BlueBoldText>25% MORE</BlueBoldText> than scheduled maintenance
               </Typography>
             </Paper>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Paper elevation={8} sx={{...paperSX, p:{xs:6,md:2}}}>
-              <Typography variant="h6"  textAlign={'center'}>
-                Properly maintained equipment can last <BlueBoldText>35% LONGER</BlueBoldText> 
+            <Paper elevation={8} sx={{ ...paperSX, p: { xs: 6, md: 2 } }}>
+              <Typography variant="h6" textAlign={"center"}>
+                Properly maintained equipment can last{" "}
+                <BlueBoldText>35% LONGER</BlueBoldText>
               </Typography>
             </Paper>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Paper elevation={8} sx={{...paperSX, p:{xs:6,md:2}}}>
-              <Typography variant="h6"  textAlign={'center'}>
-                Properly maintained equipment can have <BlueBoldText>45% REDUCED</BlueBoldText> energy costs
+            <Paper elevation={8} sx={{ ...paperSX, p: { xs: 6, md: 2 } }}>
+              <Typography variant="h6" textAlign={"center"}>
+                Properly maintained equipment can have{" "}
+                <BlueBoldText>45% REDUCED</BlueBoldText> energy costs
               </Typography>
             </Paper>
           </Grid>
@@ -149,4 +155,3 @@ const HeatingIntro = () => {
 };
 
 export default HeatingIntro;
-

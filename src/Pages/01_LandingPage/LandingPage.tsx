@@ -9,7 +9,7 @@ const LandingPage = () => {
     <>
       <Header />
       <Introduction />
-    <DescriptionCards/>
+      <DescriptionCards />
       <ServiceBanner />
       <ReviewCarousel />
     </>

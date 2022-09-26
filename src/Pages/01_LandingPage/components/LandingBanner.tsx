@@ -6,13 +6,13 @@ import tools from "../../../Assets/stock/tools.jpg";
 import theme from "../../../Styles/theme";
 
 const bannerHeightSX = { height: "600px" };
-const backgroundColor: string = theme.palette.secondary.main
+const backgroundColor: string = theme.palette.secondary.main;
 const pictureAngleSX = {
   clipPath: `polygon(0 0, 100% 0%, 100% 100%, 100% 100%)`,
   ...bannerHeightSX,
   width: "20%",
   background: "#002685",
-}
+};
 
 const pictureSX = {
   backgroundImage: `url(${tools})`,
@@ -22,23 +22,21 @@ const pictureSX = {
   backgroundPosition: "center",
   display: "flex",
   justifyContent: "flex-end",
-}
+};
 
 const backgroundBoxSX = {
   background: backgroundColor,
   ...bannerHeightSX,
-}
+};
 const textBoxSX = {
   ...bannerHeightSX,
   width: "100%",
-  display:'flex',
-  alignItems:'center'
-}
+  display: "flex",
+  alignItems: "center",
+};
 const ServiceBanner = () => {
   return (
-    <Box
-      sx={backgroundBoxSX}
-    >
+    <Box sx={backgroundBoxSX}>
       <Grid
         container
         direction="row"
@@ -46,18 +44,12 @@ const ServiceBanner = () => {
         alignItems="center"
       >
         <Grid item xs={0} md={6}>
-          <Box
-            sx={pictureSX}
-          >
-            <Box
-              sx={pictureAngleSX}
-            ></Box>
+          <Box sx={pictureSX}>
+            <Box sx={pictureAngleSX}></Box>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box
-            sx={textBoxSX}
-          >
+          <Box sx={textBoxSX}>
             <Stack
               spacing={4}
               sx={{
@@ -89,7 +81,7 @@ const ServiceBanner = () => {
                 Refrigeration Tradespeople are ready to get you back up and
                 running as fast as possible without compromising on quality.
               </Typography>
-              <Link to="/services" >
+              <Link to="/services">
                 <Typography variant="body1" sx={{ color: "white" }}>
                   Learn more about our maintenance services
                 </Typography>

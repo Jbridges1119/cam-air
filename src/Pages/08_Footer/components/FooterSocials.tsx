@@ -19,8 +19,8 @@ const iconSX = {
   },
 };
 const ImgButton = styled(Button)`
-max-height: 60px;
-`
+  max-height: 60px;
+`;
 const GridSX = { display: "flex", justifyContent: "center" };
 const SocialsFooter = () => {
   return (
@@ -34,22 +34,22 @@ const SocialsFooter = () => {
       <Divider />
       <Grid container direction="row">
         <Grid item xs={3} sx={GridSX}>
-          <ImgButton >
-            <FacebookIcon sx={iconSX}/>
+          <ImgButton>
+            <FacebookIcon sx={iconSX} />
           </ImgButton>
         </Grid>
         <Grid item xs={3} sx={GridSX}>
-          <ImgButton >
+          <ImgButton>
             <TwitterIcon sx={iconSX} />
           </ImgButton>
         </Grid>
         <Grid item xs={3} sx={GridSX}>
-          <ImgButton >
+          <ImgButton>
             <LinkedInIcon sx={iconSX} />
           </ImgButton>
         </Grid>
         <Grid item xs={3} sx={GridSX}>
-          <ImgButton >
+          <ImgButton>
             <InstagramIcon sx={iconSX} />
           </ImgButton>
         </Grid>

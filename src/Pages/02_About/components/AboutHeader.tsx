@@ -10,7 +10,7 @@ const outerBoxSX = {
   width: "100%",
   boxSizing: "border-box",
   backgroundSize: "cover",
-  backgroundPosition:"25% 75%",
+  backgroundPosition: "25% 75%",
   display: "flex",
   overflowX: "hidden",
   pt: { sm: "10%", xs: "30%" },
@@ -23,7 +23,7 @@ const titleSX = {
   color: "white",
   fontWeight: "bold",
   textAlign: { xs: "center", sm: "left" },
-}
+};
 const AboutHeader = () => {
   return (
     <Box sx={outerBoxSX}>
@@ -35,10 +35,7 @@ const AboutHeader = () => {
           alignItems="center"
         >
           <Grid item xs={10} sm={12} md={6} px={5} my={20}>
-            <Typography
-              variant="h1"
-              sx={titleSX}
-            >
+            <Typography variant="h1" sx={titleSX}>
               About Us
             </Typography>
           </Grid>

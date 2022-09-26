@@ -84,7 +84,7 @@ const ACSupport = () => {
             <Typography variant="h4" fontWeight={"bold"} mt={3} mb={2}>
               We install and service:
             </Typography>
-            <Typography variant="h6" fontWeight={"lighter"} >
+            <Typography variant="h6" fontWeight={"lighter"}>
               <ul>
                 {acServiceList.map((item: string, i: number) => {
                   return <li key={i}>{item}</li>;

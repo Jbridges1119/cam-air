@@ -62,27 +62,30 @@ const ServiceSupport = () => {
           <Grid item sm={1} xs={0} />
           <Grid item sm={7} xs={12}>
             <Typography variant="h4" fontWeight={"bold"} pt={2}>
-            What to expect
+              What to expect
             </Typography>
             <Typography variant="h6" fontWeight={"lighter"}>
-            <ul>
-            <li>
-              We will connect with you immediately
-            </li>
-            <li>
-            One of our Certified Technicians will come to your location to diagnose the problem and provide a quote for the repair
-            </li>
-            <li>
-            With your go-ahead, we’ll do the repair <b>right away</b> if we have the part
-            </li>
-            <li>
-            If we need to order the part, we will schedule a convenient time to come back to your home, that day if possible
-            </li>
-            <li>
-            If you decide you’d rather <strong>replace your equipment</strong>, then we’ll immediately connect you a Specialist to provide you with your options in-order to get the <b>best value</b>.
-            </li>
-
-          </ul>
+              <ul>
+                <li>We will connect with you immediately</li>
+                <li>
+                  One of our Certified Technicians will come to your location to
+                  diagnose the problem and provide a quote for the repair
+                </li>
+                <li>
+                  With your go-ahead, we’ll do the repair <b>right away</b> if
+                  we have the part
+                </li>
+                <li>
+                  If we need to order the part, we will schedule a convenient
+                  time to come back to your home, that day if possible
+                </li>
+                <li>
+                  If you decide you’d rather{" "}
+                  <strong>replace your equipment</strong>, then we’ll
+                  immediately connect you a Specialist to provide you with your
+                  options in-order to get the <b>best value</b>.
+                </li>
+              </ul>
             </Typography>
           </Grid>
         </Grid>

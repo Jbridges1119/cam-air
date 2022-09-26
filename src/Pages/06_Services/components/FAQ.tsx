@@ -1,4 +1,5 @@
 import React from "react";
+//MUI
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
@@ -8,6 +9,7 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Box, Link } from "@mui/material";
+//Style
 import theme from "../../../Styles/theme";
 
 const Accordion = styled((props: AccordionProps) => (
@@ -34,9 +36,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
   />
 ))(({ theme }) => ({
   backgroundColor:
-    theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, .05)"
-      : "white",
+    theme.palette.mode === "dark" ? "rgba(255, 255, 255, .05)" : "white",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -63,18 +63,15 @@ const frameBoxSX = {
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(4),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
-
 }));
 
 const TitleText = styled(Typography)`
-font-weight: bold;
-color: ${theme.palette.primary.main};
-padding: 5px;
-`
+  font-weight: bold;
+  color: ${theme.palette.primary.main};
+  padding: 5px;
+`;
 
-const tipsList = [
-  
-]
+const tipsList = [];
 
 const FAQ = () => {
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
@@ -93,13 +90,8 @@ const FAQ = () => {
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}
         >
-          <AccordionSummary
-            aria-controls="panel1d-content"
-            id="panel1d-header"
-          >
-            <TitleText variant="h4">
-              Why does temperature matter?
-            </TitleText>
+          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+            <TitleText variant="h4">Why does temperature matter?</TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -114,7 +106,7 @@ const FAQ = () => {
               compounds other indoor environmental problems—for example, high
               temperatures increase building material off-gassing, releasing
               irritating and toxic chemicals, like volatile organic compounds
-              (VOCs) into the air. 
+              (VOCs) into the air.
               <br />
               <br />
               Many people only consider temperature in terms of comfort, but it
@@ -131,10 +123,7 @@ const FAQ = () => {
           expanded={expanded === "panel2"}
           onChange={handleChange("panel2")}
         >
-          <AccordionSummary
-            aria-controls="panel2d-content"
-            id="panel2d-header"
-          >
+          <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
             <TitleText variant="h4">
               What temperature should my space be?
             </TitleText>
@@ -179,9 +168,7 @@ const FAQ = () => {
           expanded={expanded === "panel3"}
           onChange={handleChange("panel3")}
         >
-          <AccordionSummary
-            aria-controls="panel3d-content"
-            id="panel3d-header">
+          <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
             <TitleText variant="h4">
               Which refrigerant’s right for my system?
             </TitleText>
@@ -198,7 +185,7 @@ const FAQ = () => {
               proficient with all refrigerants from Propane (R290) to R404A. We
               can even help with R22 (freon) retrofits if you’re ready to
               convert your equipment to a more sustainable and economically
-              viable option. 
+              viable option.
               <br />
               <br />
               Most importantly, we’ll work with you to understand your needs and
@@ -210,10 +197,7 @@ const FAQ = () => {
           expanded={expanded === "panel4"}
           onChange={handleChange("panel4")}
         >
-          <AccordionSummary
-            aria-controls="panel4d-content"
-            id="panel4d-header"
-          >
+          <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
             <TitleText variant="h4">
               How can I reduce my air conditioning energy bills?
             </TitleText>
@@ -228,14 +212,14 @@ const FAQ = () => {
               <br />
               Retrofitting or modifying existing systems can help reduce your
               energy bills. There may even be rebates available in your area for
-              businesses reducing their energy emissions. 
+              businesses reducing their energy emissions.
               <br />
               <br />
               Did you know air conditioning alone accounts for roughly 8.5% of
               worldwide electricity use? Canada has higher and lower temperature
               extremes than most countries, so our buildings have to compensate
               for those extremes. That’s just one reason why energy accounts for
-              82% of Canada’s total emissions. 
+              82% of Canada’s total emissions.
               <br />
               <br />
               We all love saving money, and that’s even more satisfying when
@@ -245,31 +229,25 @@ const FAQ = () => {
               <br />
               Here’s some quick tips:
             </Typography>
-          
-              <ol>
-                <li>Make sure your thermostats are in the right locations</li>
-                <li>
-                  If possible, keep unnecessary lights off and blinds and
-                  windows closed, when your air conditioning is running
-                </li>
-                <li>Manage your humidity</li>
-                <li>Only use air conditioning when necessary</li>
-                <li>Maintain your air conditioning unit</li>
-              </ol>
-           
+
+            <ol>
+              <li>Make sure your thermostats are in the right locations</li>
+              <li>
+                If possible, keep unnecessary lights off and blinds and windows
+                closed, when your air conditioning is running
+              </li>
+              <li>Manage your humidity</li>
+              <li>Only use air conditioning when necessary</li>
+              <li>Maintain your air conditioning unit</li>
+            </ol>
           </AccordionDetails>
         </Accordion>
         <Accordion
           expanded={expanded === "panel5"}
           onChange={handleChange("panel5")}
         >
-          <AccordionSummary
-            aria-controls="panel5d-content"
-            id="panel5d-header"
-          >
-            <TitleText variant="h4">
-              What else does Cam Air Service?
-            </TitleText>
+          <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+            <TitleText variant="h4">What else does Cam Air Service?</TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -279,13 +257,13 @@ const FAQ = () => {
               <br />
               We at Cam Aid don't stop at HVAC and Refrigeration. If your
               commercial kitchen has hot food equipment we can service that too.
-              From ovens to fryers, we have you completely covered. 
+              From ovens to fryers, we have you completely covered.
               <br />
-              <br /> 
-              We know how important coffee is to every business. So we
-              took it upon ourselves to become experts with commercial coffee
-              machines. Curtis to Bunn units, we have a vast selection of
-              replacement parts in house to get you back up and running asap.
+              <br />
+              We know how important coffee is to every business. So we took it
+              upon ourselves to become experts with commercial coffee machines.
+              Curtis to Bunn units, we have a vast selection of replacement
+              parts in house to get you back up and running asap.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -293,19 +271,14 @@ const FAQ = () => {
           expanded={expanded === "panel6"}
           onChange={handleChange("panel6")}
         >
-          <AccordionSummary
-            aria-controls="panel6d-content"
-            id="panel6d-header"
-          >
-            <TitleText variant="h4">
-              Does Cam Air work safely?
-            </TitleText>
+          <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
+            <TitleText variant="h4">Does Cam Air work safely?</TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
               We value our customers’ and employees’ safety above all else.
             </Typography>
-            <Typography> 
+            <Typography>
               <br />
               Our commitment to Safety is one of our core values and we have the
               certification and training to back that up. At Cam Air, we also
@@ -314,19 +287,18 @@ const FAQ = () => {
             <Typography variant="h6" fontWeight={"bold"}>
               <br /> Here’s what you can expect from our team. At Cam Air, we:
             </Typography>
-            
-              <ul>
-                <li>Continuously audit and improve our safety program</li>
-                <li>Are vendor-trained for specialized equipment</li>
-                <li>
-                  Have the knowledge, experience, and training required to
-                  successfully complete work in any facility
-                </li>
-                <li>
-                  Ensure all team members pass full security background checks
-                </li>
-              </ul>
-            
+
+            <ul>
+              <li>Continuously audit and improve our safety program</li>
+              <li>Are vendor-trained for specialized equipment</li>
+              <li>
+                Have the knowledge, experience, and training required to
+                successfully complete work in any facility
+              </li>
+              <li>
+                Ensure all team members pass full security background checks
+              </li>
+            </ul>
           </AccordionDetails>
         </Accordion>
       </Box>

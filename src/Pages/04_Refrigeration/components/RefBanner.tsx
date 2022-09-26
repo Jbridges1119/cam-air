@@ -49,17 +49,17 @@ const contactButtonSX = {
 };
 
 const LightText = styled(Typography)`
-color: white; 
-font-weight: lighter; 
-padding-bottom: 10px
+  color: white;
+  font-weight: lighter;
+  padding-bottom: 10px;
 `;
 
 const textBoxSX = {
   ...bannerHeightSX,
   width: "100%",
-  display:'flex',
-  alignItems:'center'
-}
+  display: "flex",
+  alignItems: "center",
+};
 
 const RefBanner = () => {
   return (
@@ -76,9 +76,7 @@ const RefBanner = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box
-            sx={textBoxSX}
-          >
+          <Box sx={textBoxSX}>
             <Stack spacing={1} sx={textStackSX}>
               <Typography
                 variant="h5"
@@ -86,27 +84,20 @@ const RefBanner = () => {
               >
                 Commercial refrigeration installation, repair and maintenance?
               </Typography>
-              <LightText
-                variant="h6"
-              >
+              <LightText variant="h6">
                 If you need to make it cold and keep it cold Cam Air has the
                 knowledge, experience and expertise to do it right.
               </LightText>
-              <LightText
-                variant="h6"
-              >
-                For <Link to={"/about"}>over 30 years</Link> we’ve taken pride in creating systems that are
-                cost-effective, energy efficient, durable and serviceable.
+              <LightText variant="h6">
+                For <Link to={"/about"}>over 30 years</Link> we’ve taken pride
+                in creating systems that are cost-effective, energy efficient,
+                durable and serviceable.
               </LightText>
-              <LightText
-                variant="h6"
-              >
+              <LightText variant="h6">
                 Nothing is beyond our capabilities when it comes to
                 refrigeration.
               </LightText>
-              <LightText
-                variant="h6"
-              >
+              <LightText variant="h6">
                 Contact us today for a FREE consultation.
               </LightText>
               <Link to="/contact" style={{ textDecoration: "none" }}>

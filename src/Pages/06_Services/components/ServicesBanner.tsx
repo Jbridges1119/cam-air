@@ -82,7 +82,7 @@ const HeatingBanner = () => {
                 variant="h6"
                 sx={{ color: "white", fontWeight: "lighter" }}
               >
-               REDUCE DOWNTIME - REDUCE LOST PRODUCTS
+                REDUCE DOWNTIME - REDUCE LOST PRODUCTS
               </Typography>
               <Typography
                 variant="h5"
@@ -92,11 +92,14 @@ const HeatingBanner = () => {
               </Typography>
 
               <LightText variant="h6">
-              Waiting for problems to happen can be expensive and disruptive. A custom maintenance program will help you avoid downtime, improve performance and save you money.
+                Waiting for problems to happen can be expensive and disruptive.
+                A custom maintenance program will help you avoid downtime,
+                improve performance and save you money.
               </LightText>
 
               <LightText variant="h6">
-              Contact us today and we’ll design a custom maintenance program for you.
+                Contact us today and we’ll design a custom maintenance program
+                for you.
               </LightText>
               <Link to="/contact" style={{ textDecoration: "none" }}>
                 <Button variant="contained" sx={contactButtonSX}>

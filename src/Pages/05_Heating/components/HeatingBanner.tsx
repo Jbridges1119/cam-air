@@ -49,71 +49,67 @@ const contactButtonSX = {
 };
 
 const LightText = styled(Typography)`
-color: white; 
-font-weight: lighter; 
-padding-bottom: 10px
+  color: white;
+  font-weight: lighter;
+  padding-bottom: 10px;
 `;
 
 const textBoxSX = {
   ...bannerHeightSX,
   width: "100%",
-  display:'flex',
-  alignItems:'center'
-}
+  display: "flex",
+  alignItems: "center",
+};
 
 const HeatingBanner = () => {
   return (
     <Box sx={backgroundBoxSX}>
-    <Grid
-      container
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Grid item xs={0} md={6}>
-        <Box sx={pictureSX}>
-          <Box sx={pictureAngleSX}></Box>
-        </Box>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Box
-          sx={textBoxSX}
-        >
-          <Stack spacing={1} sx={textStackSX}>
-            <Typography
-              variant="h5"
-              sx={{ color: "white", fontWeight: "bold", pb: 0.5 }}
-            >
-              Reliable Repair & Maintenance Services
-            </Typography>
-            <LightText
-              variant="h6"
-            >
-             Our highly skilled technicians are trained to present you with complete information so you can make appropriate decisions when repairs are needed for any of your home comfort systems.
-            </LightText>
-            <LightText
-              variant="h6"
-            >
-              For <Link to={"/about"}>over 30 years</Link> we’ve taken pride in creating systems that are
-              cost-effective, energy efficient, durable and serviceable.
-            </LightText>
-       
-            <LightText
-              variant="h6"
-            >
-              Please call now and arrange for one of our friendly, skilled technicians to assess your needs.
-            </LightText>
-            <Link to="/contact" style={{ textDecoration: "none" }}>
-              <Button variant="contained" sx={contactButtonSX}>
-                Contact Us
-              </Button>
-            </Link>
-          </Stack>
-        </Box>
-      </Grid>
-    </Grid>
-  </Box>
-  )
-}
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={0} md={6}>
+          <Box sx={pictureSX}>
+            <Box sx={pictureAngleSX}></Box>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box sx={textBoxSX}>
+            <Stack spacing={1} sx={textStackSX}>
+              <Typography
+                variant="h5"
+                sx={{ color: "white", fontWeight: "bold", pb: 0.5 }}
+              >
+                Reliable Repair & Maintenance Services
+              </Typography>
+              <LightText variant="h6">
+                Our highly skilled technicians are trained to present you with
+                complete information so you can make appropriate decisions when
+                repairs are needed for any of your home comfort systems.
+              </LightText>
+              <LightText variant="h6">
+                For <Link to={"/about"}>over 30 years</Link> we’ve taken pride
+                in creating systems that are cost-effective, energy efficient,
+                durable and serviceable.
+              </LightText>
 
-export default HeatingBanner
+              <LightText variant="h6">
+                Please call now and arrange for one of our friendly, skilled
+                technicians to assess your needs.
+              </LightText>
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <Button variant="contained" sx={contactButtonSX}>
+                  Contact Us
+                </Button>
+              </Link>
+            </Stack>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
+
+export default HeatingBanner;

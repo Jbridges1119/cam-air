@@ -60,7 +60,6 @@ const LocationCard = () => {
             <WhiteTypo variant="h6">
               Phone: &nbsp;
               <PlainLink href="tel:4033206690">
-                {" "}
                 <WhiteTypoLink variant="body1" display={"inline"}>
                   403.320.6690
                 </WhiteTypoLink>

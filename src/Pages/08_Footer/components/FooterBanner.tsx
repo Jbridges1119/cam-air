@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 //MUI
 import { Box, Button, Typography } from "@mui/material";
-import { Link } from 'react-router-dom';
-import theme from '../../../Styles/theme';
+import { Link } from "react-router-dom";
+import theme from "../../../Styles/theme";
 
 const outerBoxSX = {
   background: theme.palette.secondary.main,
@@ -10,8 +10,8 @@ const outerBoxSX = {
   justifyContent: "center",
   alignItems: "center",
   py: 4,
-  mb:5
-}
+  mb: 5,
+};
 const frameBoxSX = {
   display: "flex",
   flexDirection: { xs: "column", sm: "row" },
@@ -19,7 +19,7 @@ const frameBoxSX = {
   alignItems: "center",
   textAlign: "center",
   maxWidth: "1200px",
-}
+};
 const contactButtonSX = {
   m: 1.5,
   fontSize: { sm: "20px", xs: "20px" },
@@ -28,36 +28,27 @@ const contactButtonSX = {
   "&:hover": {
     background: "none",
   },
-}
+};
 const textSX = {
   m: 1.5,
   color: "white",
   textAlign: { xs: "center", sm: "left" },
-}
+};
 const Banner = () => {
   return (
-    <Box
-    sx={outerBoxSX}
-  >
-    <Box
-      sx={frameBoxSX}
-    >
-      <Typography
-        variant="h4"
-        sx={textSX}
-      >
-        Contact our expert team today for a FREE no-obligation consultation
-      </Typography>
-      <Link to="/contact"style={{textDecoration:'none'}}>
-      <Button
-        variant="contained"
-        sx={contactButtonSX}
-      >
-        Contact Us Now
-      </Button></Link>
+    <Box sx={outerBoxSX}>
+      <Box sx={frameBoxSX}>
+        <Typography variant="h4" sx={textSX}>
+          Contact our expert team today for a FREE no-obligation consultation
+        </Typography>
+        <Link to="/contact" style={{ textDecoration: "none" }}>
+          <Button variant="contained" sx={contactButtonSX}>
+            Contact Us Now
+          </Button>
+        </Link>
+      </Box>
     </Box>
-  </Box>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

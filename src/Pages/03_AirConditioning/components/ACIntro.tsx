@@ -66,9 +66,8 @@ const ACIntro = () => {
           <Grid item xs={0} md={1} />
           <Grid item xs={12} md={5.5}>
             <Box sx={familyPictureSX} />
-          </Grid>{" "}
+          </Grid>
         </Grid>
-
         <Typography variant="h4" fontWeight={"bold"} py={3}>
           Navigating refrigerant options can be daunting.
         </Typography>

@@ -49,50 +49,57 @@ const refServiceList = [
   "Heat pumps",
   "Heat/energy recovery systems",
   "VRF Systems",
- 
 ];
 
 const HeatingIntro = () => {
   return (
     <Box sx={{ ...flexCenterSX }}>
-    <Box sx={textBoxSX}>
-      <Typography variant="h4" fontWeight={"bold"} py={2}>
-        We design, build, service and maintain industrial and commercial
-        refrigeration systems.
-      </Typography>
-      <RepeatedText variant="h6">
-      At Cam Air, our seasoned repair professionals can handle all types of heating services, including repairs, maintenance and safety checks and tune-ups, fixing broken and noisy units, and installing new replacement systems. We can expertly service, repair or install a wide range of climate control systems in your home.
-      </RepeatedText>
-      <RepeatedText variant="h6">
-      We’ve built a reputation in Lethbridge and throughout Southern Alberta for quality work, competitive pricing, and customer service that exceeds expectations. When you need reliable heating system maintenance, repairs or installations, <Link to={"/contact"}>contact us.</Link>
-      </RepeatedText>
+      <Box sx={textBoxSX}>
+        <Typography variant="h4" fontWeight={"bold"} py={2}>
+          We design, build, service and maintain industrial and commercial
+          refrigeration systems.
+        </Typography>
+        <RepeatedText variant="h6">
+          At Cam Air, our seasoned repair professionals can handle all types of
+          heating services, including repairs, maintenance and safety checks and
+          tune-ups, fixing broken and noisy units, and installing new
+          replacement systems. We can expertly service, repair or install a wide
+          range of climate control systems in your home.
+        </RepeatedText>
+        <RepeatedText variant="h6">
+          We’ve built a reputation in Lethbridge and throughout Southern Alberta
+          for quality work, competitive pricing, and customer service that
+          exceeds expectations. When you need reliable heating system
+          maintenance, repairs or installations,{" "}
+          <Link to={"/contact"}>contact us.</Link>
+        </RepeatedText>
 
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Grid item xs={12} md={5.5}>
-          <Box sx={familyPictureSX} />
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item xs={12} md={5.5}>
+            <Box sx={familyPictureSX} />
+          </Grid>
+          <Grid item xs={0} md={1} />
+          <Grid item xs={12} md={5.5}>
+            <Typography variant="h5" fontWeight={"bold"} pt={3} pb={2}>
+              We install and service:
+            </Typography>
+            <Typography variant="h6" fontWeight={"lighter"} mb={6}>
+              <ul>
+                {refServiceList.map((item: string, i: number) => {
+                  return <li key={i}>{item}</li>;
+                })}
+              </ul>
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={0} md={1} />
-        <Grid item xs={12} md={5.5}>
-          <Typography variant="h5" fontWeight={"bold"} pt={3} pb={2}>
-            We install and service:
-          </Typography>
-          <Typography variant="h6" fontWeight={"lighter"} mb={6}>
-            <ul>
-              {refServiceList.map((item: string, i: number) => {
-                return <li key={i}>{item}</li>;
-              })}
-            </ul>
-          </Typography>
-        </Grid>
-      </Grid>
+      </Box>
     </Box>
-  </Box>
-  )
-}
+  );
+};
 
-export default HeatingIntro
+export default HeatingIntro;

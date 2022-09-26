@@ -21,13 +21,11 @@ const AboutIntro = () => {
         <Typography variant="h6" color={"#002685"}>
           A Local business. Serving local businesses
         </Typography>
-
         <Typography variant="h3" fontWeight={"bold"} py={2}>
           At Cam Air, we’re focused on providing the best possible customer
           service in safe, effective, and innovative ways.
         </Typography>
         <Typography variant="h6" fontWeight={"lighter"} pt={2} mb={10}>
-          {" "}
           Founded in 1992 by Mark Cameron, Cam Air Refrigeration & Heating is a
           privately owned family run company that has established itself as a
           leader in the commercial refrigeration, heating and air conditioning

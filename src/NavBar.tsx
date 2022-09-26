@@ -21,12 +21,12 @@ import theme from "./Styles/theme";
 
 const drawerWidth = 240;
 const navItems = [
-  {text: "About", path: '/about'},
-  {text: "Air Conditioning", path: '/airconditioning'},
-  {text: "Refrigeration", path: '/refrigeration'},
-  {text: "Heating", path: '/heating'},
-  {text: "Services", path: '/services'},
-  {text: "Contact", path: '/contact'},
+  { text: "About", path: "/about" },
+  { text: "Air Conditioning", path: "/airconditioning" },
+  { text: "Refrigeration", path: "/refrigeration" },
+  { text: "Heating", path: "/heating" },
+  { text: "Services", path: "/services" },
+  { text: "Contact", path: "/contact" },
 ];
 
 const NavBar: React.FC = () => {
@@ -50,8 +50,8 @@ const NavBar: React.FC = () => {
       </Button>
       <Divider />
       <List>
-      <Link to="/" style={{textDecoration:'none'}}>
-          <ListItem  disablePadding>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center", color: "white" }}>
               <ListItemText
                 primary={"Home"}
@@ -61,20 +61,26 @@ const NavBar: React.FC = () => {
                 }}
               />
             </ListItemButton>
-          </ListItem></Link>
+          </ListItem>
+        </Link>
         {navItems.map((item) => (
-          <Link to={item.path} key={item.text} style={{textDecoration:'none'}}>
-          <ListItem  disablePadding>
-            <ListItemButton sx={{ textAlign: "center", color: "white" }}>
-              <ListItemText
-                primary={item.text}
-                primaryTypographyProps={{
-                  fontSize: "22px",
-                  fontWeight: "bold",
-                }}
-              />
-            </ListItemButton>
-          </ListItem></Link>
+          <Link
+            to={item.path}
+            key={item.text}
+            style={{ textDecoration: "none" }}
+          >
+            <ListItem disablePadding>
+              <ListItemButton sx={{ textAlign: "center", color: "white" }}>
+                <ListItemText
+                  primary={item.text}
+                  primaryTypographyProps={{
+                    fontSize: "22px",
+                    fontWeight: "bold",
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -91,7 +97,6 @@ const NavBar: React.FC = () => {
             background: "white",
           }}
         >
-     
           <Box
             sx={{
               background: "white",
@@ -101,10 +106,11 @@ const NavBar: React.FC = () => {
               borderBottomLeftRadius: 15,
               borderBottomRightRadius: 15,
               display: { md: "inline-block", xs: "none" },
-              boxShadow:'0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14)'
+              boxShadow:
+                "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14)",
             }}
           >
-            <Button  href="tel:4033206690">
+            <Button href="tel:4033206690">
               <Typography variant="h5">403.320.6690</Typography>
             </Button>
           </Box>
@@ -116,17 +122,23 @@ const NavBar: React.FC = () => {
               alignItems: "space-between",
               width: "100%",
             }}
-          ><Link to="/">
-            <Button sx={{"&:hover": {
-                  background: "none",
-                },}}>
-              <CardMedia
-                component="img"
-                sx={{ height: "50px", ml: { lg:0, md: 2, xs: 0.5 }, }}
-                image={logo}
-                alt="Loading.."
-              />
-            </Button></Link>
+          >
+            <Link to="/">
+              <Button
+                sx={{
+                  "&:hover": {
+                    background: "none",
+                  },
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  sx={{ height: "50px", ml: { lg: 0, md: 2, xs: 0.5 } }}
+                  image={logo}
+                  alt="Loading.."
+                />
+              </Button>
+            </Link>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -142,19 +154,32 @@ const NavBar: React.FC = () => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "none", md: "block" } }}
             ></Typography>
-            <Box sx={{ display: { xs: "none", md: "block" }, mr: {md:2, lg:0} }}>
+            <Box
+              sx={{
+                display: { xs: "none", md: "block" },
+                mr: { md: 2, lg: 0 },
+              }}
+            >
               {navItems.map((item) => (
-                <Link to={item.path} key={item.text} style={{textDecoration:'none'}}>
-                <Button
-                  sx={{ color: theme.palette.info.main, fontSize: "18px", mt: 2,
-                  "&:hover": {
-                    background: "none",
-                    color:theme.palette.primary.main
-                  },
-                }}
+                <Link
+                  to={item.path}
+                  key={item.text}
+                  style={{ textDecoration: "none" }}
                 >
-                  {item.text}
-                </Button></Link>
+                  <Button
+                    sx={{
+                      color: theme.palette.info.main,
+                      fontSize: "18px",
+                      mt: 2,
+                      "&:hover": {
+                        background: "none",
+                        color: theme.palette.primary.main,
+                      },
+                    }}
+                  >
+                    {item.text}
+                  </Button>
+                </Link>
               ))}
             </Box>
           </Toolbar>
