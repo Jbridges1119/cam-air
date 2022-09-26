@@ -37,7 +37,7 @@ const RepeatedText = styled(Typography)`
   font-weight: lighter;
 `;
 
-const SubTitle = styled(Typography)`
+const SecondTitle = styled(Typography)`
 font-weight: bold;
 padding-top: 20px;
 padding-bottom: 15px;
@@ -81,10 +81,10 @@ const HeatingIntro = () => {
           alignItems="center"
         >
           <Grid item xs={12} md={5.5}>
-            <SubTitle variant="h5" >
+            <SecondTitle variant="h5" >
               HVAC/Refrigeration maintenance programs to fit your needs and your
               budget
-            </SubTitle>
+            </SecondTitle>
             <Typography variant="h6" fontWeight={"lighter"} mb={2}>
               Minimize your downtime and keep your building environment
               comfortable with one of our customizable industrial or commercial
@@ -110,9 +110,9 @@ const HeatingIntro = () => {
           </Grid>
         </Grid>
 
-        <SubTitle variant="h4">
+        <SecondTitle variant="h4">
           Did you know?
-        </SubTitle>
+        </SecondTitle>
         <Grid
           container
           direction="row"
