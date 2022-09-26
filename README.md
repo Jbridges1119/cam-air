@@ -10,7 +10,6 @@ This site has been hosted - Link below:
 ## Tech Stack
 - TypeScript
 - React 
-- Node 
 - Axios 
 - Material UI 
 - Bootstrap
