@@ -149,20 +149,3 @@ const HeatingIntro = () => {
 
 export default HeatingIntro;
 
-{
-  /* <Typography variant="h5" fontWeight={"bold"} pt={3} pb={2}>
-Have an HVAC/Refrigeration emergency?
-</Typography>
-<Typography variant="h6" fontWeight={"lighter"} mb={6}>
-Commercial HVAC/Refrigeration system emergencies
-can happen at any time. You need a reliable partner with the
-infrastructure, expertise and training to react quickly. 
-<br/> <br/>
-At
-Cam Air Refrigeration and Heating, our team of certified HVAC/R technicians are
-ready 24/7/365 to troubleshoot and identify problems quickly and
-accurately. You can count on us for emergency HVAC/R service and
-24-hour commercial HVAC/Refrigeration repair.  <br/> <br/>When
-downtime is not an option, just call our 24-hour emergency and you will be immediately connected to one of technicians.
-</Typography> */
-}
