@@ -107,15 +107,14 @@ const Form: React.FC = () => {
       return alert("Please enter valid email so I can get back to you");
     if (!formState["How Can We Help"])
       return alert("Please leave us a message");
-    if (!captcha)
-      return alert("Are you a robot?");
+    if (!captcha) return alert("Are you a robot?");
     setSubmitting(true);
     await postSubmission();
   };
   const recaotchaLoaded = () => {
     setCaptcha(true);
   };
-//Axios call with response to user
+  //Axios call with response to user
   const postSubmission = async () => {
     const payload = {
       ...formState,
@@ -158,11 +157,11 @@ const Form: React.FC = () => {
   };
 
   const formLabels = [
-    { item: "First Name", grid: 6, row: 1, required: true },
-    { item: "Last Name", grid: 6, row: 1, required: true },
+    { item: "First Name", grid: 5.9, row: 1, required: true },
+    { item: "Last Name", grid: 5.9, row: 1, required: true },
     { item: "Company Name", grid: 12, row: 1, required: true },
-    { item: "Phone", grid: 6, row: 1, required: true },
-    { item: "Email", grid: 6, row: 1, required: true },
+    { item: "Phone", grid: 5.9, row: 1, required: true },
+    { item: "Email", grid: 5.9, row: 1, required: true },
     { item: "City", grid: 12, row: 1, required: false },
     { item: "How Can We Help", grid: 12, row: 6, required: true },
   ];
@@ -189,7 +188,7 @@ const Form: React.FC = () => {
 
   return (
     <OuterBox>
-      <Box sx={{ maxWidth: "800px", width:'90%' }}>
+      <Box sx={{ maxWidth: "800px", width: "90%" }}>
         <Typography variant="h4" fontWeight={"bold"}>
           Send us an email
         </Typography>
@@ -202,16 +201,20 @@ const Form: React.FC = () => {
         {inputActive ? (
           <form noValidate autoComplete="off" onSubmit={submitForm}>
             <Typography variant="body2">* Required</Typography>
-            <Grid container display="flex" width="100%">
+            <Grid
+              container
+              display="flex"
+              justifyContent={"space-between"}
+              width="100%"
+            >
               {formInputs}
             </Grid>
-            
-              <Recaptcha
-                sitekey={`${process.env.REACT_APP_RECAPTCHA_ID}`}
-                render="explicit"
-                onloadCallback={recaotchaLoaded}
-              />
-            
+            <Recaptcha
+              sitekey={`${process.env.REACT_APP_RECAPTCHA_ID}`}
+              render="explicit"
+              onloadCallback={recaotchaLoaded}
+            />
+
             <LoadingButton
               type="submit"
               sx={contactButtonSX}
