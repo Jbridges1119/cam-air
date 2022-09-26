@@ -13,8 +13,13 @@ let theme = createTheme({
     }
   },
   typography: {
-    fontFamily: "Barlow"
-  }
+    fontFamily: "Barlow",
+    body1: {
+      fontSize: "1.1rem",
+      
+    },
+  },
+
 });
 
 
