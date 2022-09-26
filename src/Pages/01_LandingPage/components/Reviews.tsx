@@ -65,7 +65,7 @@ const ReviewCarousel: React.FC = () => {
       <Carousel.Item key={i}>
         <Box
           sx={{
-            height: { xs: "450px", sm: "300px" },
+            height: { xs: "500px", sm: "300px" },
             width: "100%",
             ...flexCenterSX,
           }}
