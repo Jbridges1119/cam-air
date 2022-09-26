@@ -22,6 +22,7 @@ const pictureSX = {
   backgroundPosition: "top-right",
   display: "flex",
   justifyContent: "flex-end",
+  mt:2
 };
 
 const pictureAngleSX = {
@@ -84,8 +85,8 @@ const ACBanner = () => {
                 Need a new AC system?
               </Typography>
               <LightText variant="h6">
-                At Cam Air we can design, build, install, and{" "}
-                <Link to={"/about"}>maintain</Link> your commercial AC system.
+                At Cam Air we can <Link style={{color:'white'}}to={"/services"}>design, build, install, and
+                maintain</Link> your commercial AC system.
               </LightText>
               <LightText variant="h6">
                 Our vendor partnerships and experience allow us to provide you

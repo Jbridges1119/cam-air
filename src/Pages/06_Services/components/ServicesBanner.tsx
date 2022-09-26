@@ -22,6 +22,7 @@ const pictureSX = {
   backgroundPosition: "center",
   display: "flex",
   justifyContent: "flex-end",
+  mt:2
 };
 
 const pictureAngleSX = {

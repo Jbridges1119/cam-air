@@ -1,6 +1,6 @@
 import React from "react";
 //MUI
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Paper, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import theme from "../../../Styles/theme";
 
@@ -36,7 +36,7 @@ const textSX = {
 };
 const Banner = () => {
   return (
-    <Box sx={outerBoxSX}>
+    <Paper elevation={4} sx={outerBoxSX}>
       <Box sx={frameBoxSX}>
         <Typography variant="h4" sx={textSX}>
           Contact our expert team today for a FREE no-obligation consultation
@@ -47,7 +47,7 @@ const Banner = () => {
           </Button>
         </Link>
       </Box>
-    </Box>
+    </Paper>
   );
 };
 

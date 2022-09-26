@@ -20,6 +20,7 @@ const pictureSX = {
   backgroundPosition: "center",
   display: "flex",
   justifyContent: "flex-end",
+  mt:2
 };
 const pictureAngleSX = {
   clipPath: `polygon(0 0, 100% 0%, 100% 100%, 100% 100%)`,

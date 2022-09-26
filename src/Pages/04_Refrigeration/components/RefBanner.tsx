@@ -22,6 +22,7 @@ const pictureSX = {
   backgroundPosition: "center",
   display: "flex",
   justifyContent: "flex-end",
+  mt:2
 };
 
 const pictureAngleSX = {
@@ -89,7 +90,7 @@ const RefBanner = () => {
                 knowledge, experience and expertise to do it right.
               </LightText>
               <LightText variant="h6">
-                For <Link to={"/about"}>over 30 years</Link> we’ve taken pride
+                For <Link style={{color:'white'}} to={"/about"}>over 30 years</Link> we’ve taken pride
                 in creating systems that are cost-effective, energy efficient,
                 durable and serviceable.
               </LightText>
