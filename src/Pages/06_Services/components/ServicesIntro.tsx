@@ -125,7 +125,7 @@ const HeatingIntro = () => {
           mb={6}
         >
           <Grid item xs={12} md={3}>
-            <Paper elevation={8} sx={{ ...paperSX, p: 6 }}>
+            <Paper elevation={8} sx={{ ...paperSX, p: 8 }}>
               <Typography variant="h6" textAlign={"center"}>
                 Unscheduled repairs often cost{" "}
                 <BlueBoldText>25% MORE</BlueBoldText> than scheduled maintenance

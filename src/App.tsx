@@ -7,7 +7,6 @@ import { Route, Routes } from "react-router-dom";
 //Pages
 import LandingPage from "./Pages/01_LandingPage/LandingPage";
 import About from "./Pages/02_About/About";
-import ScrollToTop from "./Hooks/ScrollToTop";
 import AirConditioning from "./Pages/03_AirConditioning/AirConditioning";
 import Refrigeration from "./Pages/04_Refrigeration/Refrigeration";
 import Heating from "./Pages/05_Heating/Heating";

@@ -6,6 +6,7 @@ import HeatingHeader from "./components/HeatingHeader";
 import HeatingIntro from "./components/HeatingIntro";
 import HeatingBanner from "./components/HeatingBanner";
 import HeatingSupport from "./components/HeatingSupport";
+
 const BoxSX = {
   width: "100%",
   display: "flex",
