@@ -39,7 +39,7 @@ const ServicesHeader = () => {
         >
           <Grid item xs={12} sm={12} md={6} my={20}>
             <Typography variant="h1" sx={titleSX}>
-              Service & Maintenance
+              Our Services
             </Typography>
           </Grid>
         </Grid>
