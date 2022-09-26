@@ -4,7 +4,7 @@ import { Box, Typography, Grid, styled, Paper } from "@mui/material";
 //React-Router-Dom
 import { Link } from "react-router-dom";
 //Style
-import thumbsUp from "../../../Assets/stock/thumbsUp.jpg";
+import service from "../../../Assets/stock/service.jpg";
 import theme from "../../../Styles/theme";
 
 const flexCenterSX = {
@@ -23,7 +23,7 @@ const textBoxSX = {
 };
 
 const familyPictureSX = {
-  backgroundImage: `url(${thumbsUp})`,
+  backgroundImage: `url(${service})`,
   height: { sm: "475px", xs: "300px" },
   width: "100%",
   backgroundSize: "cover",
@@ -98,8 +98,9 @@ const HeatingIntro = () => {
               equipment keep large emergency breakdown costs, and equipment down
               time, drastically reduced.
               <br />
-              <br />
-              Contact us today and we’ll design a custom maintenance program
+              <br /> 
+                <Link to="/contact" > Contact us today</Link>
+                &nbsp;and we’ll design a custom maintenance program
               that is tailored to your equipment needs.
             </Typography>
           </Grid>
