@@ -4,9 +4,17 @@ Welcome to **Cam Air Refrigeration & Heating.** A single page website based off 
 Everything was built from the ground up using React, TypeScript, and MUI. I decided to build this site to practice and refine my front end skills and due to being a familiar industry where I could lean on my background for design. 
 
 This site has been hosted - Link below:
-
-
 ## [Click Here - Live Site](https://camair.jbridges1119.net/)
+
+
+## Tech Stack
+- TypeScript
+- React 
+- Node 
+- Axios 
+- Material UI 
+- Bootstrap
+
 
 ## Final Product
 ### Landing Page
@@ -17,15 +25,6 @@ This site has been hosted - Link below:
 !["Gif of Contact Pages"](https://github.com/Jbridges1119/cam-air/blob/master/docs/contact.gif?raw=true)
 
  
-
-## Tech Stack
-#### Cam Air Website was built with:
-- TypeScript
-- React 
-- Node 
-- Axios 
-- Material UI 
-- Bootstrap
 
 #### Dependencies
     "@emotion/react": "^11.10.4",
