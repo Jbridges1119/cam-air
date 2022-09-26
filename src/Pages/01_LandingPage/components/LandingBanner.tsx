@@ -12,6 +12,8 @@ const pictureAngleSX = {
   ...bannerHeightSX,
   width: "20%",
   background: "#002685",
+  mr:{md:'-1px',xs:0},
+  mt:{md:'-1px',xs:0}
 };
 
 const pictureSX = {
@@ -82,11 +84,11 @@ const ServiceBanner = () => {
                 Refrigeration Tradespeople are ready to get you back up and
                 running as fast as possible without compromising on quality.
               </Typography>
-              <Link to="/services">
+              
                 <Typography variant="body1" sx={{ color: "white" }}>
-                  Learn more about our maintenance services
+                <Link style={{color:'white'}} to="/services">Learn more about our maintenance services</Link>
                 </Typography>
-              </Link>
+              
             </Stack>
           </Box>
         </Grid>

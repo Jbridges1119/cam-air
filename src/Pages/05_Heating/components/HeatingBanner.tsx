@@ -30,6 +30,8 @@ const pictureAngleSX = {
   ...bannerHeightSX,
   width: "20%",
   background: backgroundColor,
+  mr:{md:'-1px',xs:0},
+  mt:{md:'-1px',xs:0}
 };
 
 const textStackSX = {
