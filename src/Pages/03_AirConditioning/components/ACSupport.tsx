@@ -34,7 +34,6 @@ const acServiceList = [
   "Make-Up-Airs",
   "Exhaust Fans",
   "Cooling towers",
-  "VRF Systems",
   "Split AC Systems",
   "Mobile AC Units",
   "Geothermal systems",

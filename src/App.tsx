@@ -9,7 +9,7 @@ import Contact from './Pages/07_Contact/Contact'
 import ScrollToTop from "./Hooks/ScrollToTop";
 import Refrigeration from "./Pages/04_Refrigeration/Refrigeration";
 import AirConditioning from "./Pages/03_AirConditioning/AirConditioning";
-
+import Heating from "./Pages/05_Heating/Heating";
 function App() {
 
   return (
@@ -21,6 +21,7 @@ function App() {
       <Route path="/about" element={<About/>} />
       <Route path="/airconditioning" element={<AirConditioning/>} />
       <Route path="/refrigeration" element={<Refrigeration/>} />
+      <Route path="/heating" element={<Heating/>} />
       <Route path="/contact" element={<Contact/>} />
       </Routes>
       </ScrollToTop>
