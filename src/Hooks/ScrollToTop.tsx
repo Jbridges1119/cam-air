@@ -9,7 +9,8 @@ const ScrollToTop: React.FC<Props> = ({ children }) => {
   const { pathname } = useLocation();
   console.log(pathname);
   useEffect(() => {
-    document.documentElement.scrollTo(0, 0);
+    // @ts-ignore
+    document.documentElement.scrollTo({top:0, left:0, behavior: "instant"});
   }, [pathname]);
 
   return <>{children}</>;
