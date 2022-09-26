@@ -6,7 +6,9 @@ import ServicesHeader from "./components/ServicesHeader";
 import ServicesIntro from "./components/ServicesIntro";
 import ServicesBanner from "./components/ServicesBanner";
 import ServiceSupport from "./components/ServiceSupport";
+import ServiceInstall from "./components/ServiceInstall";
 import FAQ from "./components/FAQ";
+
 
 const BoxSX = {
   width: "100%",
@@ -21,8 +23,10 @@ const Services = () => {
     <Box sx={BoxSX}>
       <ServicesHeader />
       <ServicesIntro />
-      <ServicesBanner />
       <ServiceSupport />
+      <ServicesBanner />
+     
+      <ServiceInstall/>
       <FAQ />
     </Box>
   );
