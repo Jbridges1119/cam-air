@@ -7,7 +7,7 @@ interface Props {
 const ScrollToTop: React.FC<Props> = ({ children }) => {
   // const location = useLocation();
   const { pathname } = useLocation();
-  console.log(pathname);
+
   useEffect(() => {
     // @ts-ignore
     document.documentElement.scrollTo({top:0, left:0, behavior: "instant"});
