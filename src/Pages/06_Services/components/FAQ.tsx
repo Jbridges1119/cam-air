@@ -36,7 +36,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
   backgroundColor:
     theme.palette.mode === "dark"
       ? "rgba(255, 255, 255, .05)"
-      : "rgba(0, 0, 0, .03)",
+      : "white",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -63,9 +63,18 @@ const frameBoxSX = {
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(4),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
+
 }));
 
+const TitleText = styled(Typography)`
+font-weight: bold;
+color: ${theme.palette.primary.main};
+padding: 5px;
+`
 
+const tipsList = [
+  
+]
 
 const FAQ = () => {
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
@@ -87,18 +96,10 @@ const FAQ = () => {
           <AccordionSummary
             aria-controls="panel1d-content"
             id="panel1d-header"
-            sx={{ background: "white" }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: "bold",
-                color: theme.palette.primary.main,
-                p: 1,
-              }}
-            >
+            <TitleText variant="h4">
               Why does temperature matter?
-            </Typography>
+            </TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -133,18 +134,10 @@ const FAQ = () => {
           <AccordionSummary
             aria-controls="panel2d-content"
             id="panel2d-header"
-            sx={{ background: "white" }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: "bold",
-                color: theme.palette.primary.main,
-                p: 1,
-              }}
-            >
+            <TitleText variant="h4">
               What temperature should my space be?
-            </Typography>
+            </TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -188,19 +181,10 @@ const FAQ = () => {
         >
           <AccordionSummary
             aria-controls="panel3d-content"
-            id="panel3d-header"
-            sx={{ background: "white" }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: "bold",
-                color: theme.palette.primary.main,
-                p: 1,
-              }}
-            >
+            id="panel3d-header">
+            <TitleText variant="h4">
               Which refrigerant’s right for my system?
-            </Typography>
+            </TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -208,7 +192,6 @@ const FAQ = () => {
               keep it simple for you.
             </Typography>
             <Typography>
-              {" "}
               <br />
               For decades we’ve created systems that are cost-effective,
               energy-efficient, durable, and easily serviceable. We’re
@@ -230,18 +213,10 @@ const FAQ = () => {
           <AccordionSummary
             aria-controls="panel4d-content"
             id="panel4d-header"
-            sx={{ background: "white" }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: "bold",
-                color: theme.palette.primary.main,
-                p: 1,
-              }}
-            >
+            <TitleText variant="h4">
               How can I reduce my air conditioning energy bills?
-            </Typography>
+            </TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -266,12 +241,11 @@ const FAQ = () => {
               We all love saving money, and that’s even more satisfying when
               investments contribute to a sustainable future.
             </Typography>
-
             <Typography variant="h6" fontWeight={"bold"}>
               <br />
-              Here’s some quick tips:{" "}
+              Here’s some quick tips:
             </Typography>
-            <Typography>
+          
               <ol>
                 <li>Make sure your thermostats are in the right locations</li>
                 <li>
@@ -282,7 +256,7 @@ const FAQ = () => {
                 <li>Only use air conditioning when necessary</li>
                 <li>Maintain your air conditioning unit</li>
               </ol>
-            </Typography>
+           
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -292,18 +266,10 @@ const FAQ = () => {
           <AccordionSummary
             aria-controls="panel5d-content"
             id="panel5d-header"
-            sx={{ background: "white" }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: "bold",
-                color: theme.palette.primary.main,
-                p: 1,
-              }}
-            >
+            <TitleText variant="h4">
               What else does Cam Air Service?
-            </Typography>
+            </TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -330,18 +296,10 @@ const FAQ = () => {
           <AccordionSummary
             aria-controls="panel6d-content"
             id="panel6d-header"
-            sx={{ background: "white" }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: "bold",
-                color: theme.palette.primary.main,
-                p: 1,
-              }}
-            >
+            <TitleText variant="h4">
               Does Cam Air work safely?
-            </Typography>
+            </TitleText>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="h6" fontWeight={"bold"}>
@@ -356,7 +314,7 @@ const FAQ = () => {
             <Typography variant="h6" fontWeight={"bold"}>
               <br /> Here’s what you can expect from our team. At Cam Air, we:
             </Typography>
-            <Typography>
+            
               <ul>
                 <li>Continuously audit and improve our safety program</li>
                 <li>Are vendor-trained for specialized equipment</li>
@@ -368,7 +326,7 @@ const FAQ = () => {
                   Ensure all team members pass full security background checks
                 </li>
               </ul>
-            </Typography>
+            
           </AccordionDetails>
         </Accordion>
       </Box>
