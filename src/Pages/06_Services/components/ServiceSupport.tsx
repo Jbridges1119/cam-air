@@ -61,7 +61,7 @@ const ServiceSupport = () => {
           </Grid>
           <Grid item sm={1} xs={0} />
           <Grid item sm={7} xs={12}>
-            <Typography variant="h4" fontWeight={"bold"} py={2}>
+            <Typography variant="h4" fontWeight={"bold"} pt={2}>
             What to expect
             </Typography>
             <Typography variant="h6" fontWeight={"lighter"}>
