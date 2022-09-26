@@ -61,7 +61,7 @@ const HeatingIntro = () => {
         refrigeration systems.
       </Typography>
       <RepeatedText variant="h6">
-      At Cam Air, our seasoned repair professionals can handle all types of heating services, including repairs, maintenance and safety checks and tune-ups, fixing broken and noisy units, and installing new replacement systems. We can expertly service, repair or install a wide range of climate control systems in your home, including:
+      At Cam Air, our seasoned repair professionals can handle all types of heating services, including repairs, maintenance and safety checks and tune-ups, fixing broken and noisy units, and installing new replacement systems. We can expertly service, repair or install a wide range of climate control systems in your home.
       </RepeatedText>
       <RepeatedText variant="h6">
       We’ve built a reputation in Lethbridge and throughout Southern Alberta for quality work, competitive pricing, and customer service that exceeds expectations. When you need reliable heating system maintenance, repairs or installations, <Link to={"/contact"}>contact us.</Link>
