@@ -9,11 +9,11 @@ type companyListType = {
 }[];
 
 const companyList: companyListType = [
-  { text: "- About", path: "/about" },
+  { text: "- Services", path: "/services" },
   { text: "- Air Conditioning", path: "/airconditioning" },
   { text: "- Refrigeration", path: "/refrigeration" },
   { text: "- Heating", path: "/heating" },
-  { text: "- Services", path: "/services" },
+  { text: "- About", path: "/about" },
   { text: "- Contact", path: "/contact" },
 ];
 

@@ -21,11 +21,11 @@ import theme from "./Styles/theme";
 
 const drawerWidth = 240;
 const navItems = [
-  { text: "About", path: "/about" },
+  { text: "Services", path: "/services" },
   { text: "Air Conditioning", path: "/airconditioning" },
   { text: "Refrigeration", path: "/refrigeration" },
   { text: "Heating", path: "/heating" },
-  { text: "Services", path: "/services" },
+  { text: "About", path: "/about" },
   { text: "Contact", path: "/contact" },
 ];
 
