@@ -1,7 +1,7 @@
 # [Cam Air Refrigeration & Heating](https://camair.jbridges1119.net/)
 Welcome to **Cam Air Refrigeration & Heating.** A website based on my previous employer. This website has up-to-date information on the company's services, history and a contact form with required input fields, including reCaptcha verification. I built this site to practice TypeScript and MUI 5.
 
-Everything was built from the ground up using **React**, **TypeScript**, and **MUI**. I decided to build this site to practice and refine my front end skills and due to being familiar with the industry where I could lean on my background for design.
+Everything was built from the ground up using **React**, **TypeScript**, and **MUI**. I decided to build this site to practice and refine my front end skills and due to being familiar with the industry where I could lean on my background.
  
 
 This site has been hosted - Link below:
